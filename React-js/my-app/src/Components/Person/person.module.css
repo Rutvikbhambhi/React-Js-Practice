@@ -1,0 +1,14 @@
+.PersonBox {
+    box-shadow: 2px 0px 5px grey;
+    width: 700px;
+    padding: 10px;
+    margin: 10px auto;
+}
+
+.PersonLabel {
+    color: brown;
+}
+
+.Label {
+    color: red;
+}
