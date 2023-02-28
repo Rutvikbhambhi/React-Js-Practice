@@ -1,6 +1,8 @@
 import { Component } from "react";
 import "./App.css";
-import Person from "./Components/Person/Person";
+// import Person from "./Components/Person/Person";
+// import Form from "./Components/Form";  
+import ControlledComponent from "./Components/ControlledComponent";
 // import axios from "axios";
 
 class App extends Component {
@@ -24,25 +26,48 @@ class App extends Component {
           name: "Devayat",
           age: 20,
         }
-      ]
+      ],
+      isShow: true,
       // demo: "Testing",
     };
-    this.buttonClickHandler = this.buttonClickHandler.bind(this);
+    // this.buttonClickHandler = this.buttonClickHandler.bind(this);
+    this.toggleHandler = this.toggleHandler.bind(this);
   }
 
   buttonClickHandler () {
     console.log(this.state);
   };
 
+  toggleHandler(){
+    this.setState({ isShow: !this.state.isShow });
+    // alert("")
+  }
+
+  removeHandler = (personIndex) => {
+    const personsCopy = this.state.persons;
+    // console.log(personsCopy);
+    personsCopy.splice(personIndex, 1);
+    // console.log (personsCopy); 
+    this.setState({ persons: personsCopy });
+  };
+
   render() {
     let persons;
-    persons = this.state.persons.map((p, index) => {
-      return <Person key={index} name={p.name} age={p.age}/>;
-    });
-    console.log(persons);
+    if(this.state.isShow){ 
+      persons = this.state.persons.map((p, index) => {
+        // return <Person key={index} name={p.name} age={p.age} remove={() => this.removeHandler(index)}/>;
+      });
+    } else {
+        persons = "";
+    }
+    // console.log(persons);
     return (
       <div className="App">
+        {/* <button onClick={this.toggleHandler}>Toggle</button> */}
         {persons}
+
+        {/* <Form /> */}
+        <ControlledComponent />
 
         {/* <Person 
           name={this.state.Person[0].name}

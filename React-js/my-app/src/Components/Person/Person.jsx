@@ -23,7 +23,7 @@ class Person extends Component {
         color: "red",
     };
     return(
-        <div className={PersonStyle.PersonBox}>
+        <div className={PersonStyle.PersonBox} onClick={this.props.remove}>
             <h1>
                 <label className='PersonLabel'>Name</label> :{" "}
                 <i>{this.props.name}</i>
