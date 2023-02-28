@@ -27,6 +27,7 @@ class Person extends Component {
             <h1>
                 <label className='PersonLabel'>Name</label> :{" "}
                 <i>{this.props.name}</i>
+                {/* {this.props.id} */}
                 <br />
                 <label style={style}>Age</label> :
                 <i style={{color: "blue",}}>{this.props.age}</i>
