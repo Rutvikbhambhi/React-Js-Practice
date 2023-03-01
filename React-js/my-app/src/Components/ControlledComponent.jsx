@@ -10,15 +10,15 @@ class ControlledComponent extends Component {
   }
 
   changeHandler = (event) => {
-    console.log(this.state);
+    console.log("old", this.state);
     const name = event.target.value;
     this.setState({ name },() => {
-        console.log("New",this.state);
+        console.log("New", this.state);
     });
   };
   render() {
     return (
-      <div>
+      <div className="container mt-4">
         <form>
           <input
             type="text"

@@ -1,14 +1,20 @@
 import { Component } from "react";
 import "./App.css";
 // import Person from "./Components/Person/Person";
-// import Form from "./Components/Form";  
-import ControlledComponent from "./Components/ControlledComponent";
+// import Form from "./Components/Form";
+// import ControlledComponent from "./Components/ControlledComponent";
+import Register from "./Components/Register";
+import Greet from "./Components/Greet";
 // import axios from "axios";
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      isRegistered: false,
+      name: null,
+      email: null,
+      password: null,
       persons: [
         {
           name: "Rutvik",
@@ -25,7 +31,7 @@ class App extends Component {
         {
           name: "Devayat",
           age: 20,
-        }
+        },
       ],
       isShow: true,
       // demo: "Testing",
@@ -34,11 +40,21 @@ class App extends Component {
     this.toggleHandler = this.toggleHandler.bind(this);
   }
 
-  buttonClickHandler () {
-    console.log(this.state);
+  registrationHandler = (event) => {
+    const name = event.target.name.value;
+    const email = event.target.email.value;
+    const password = event.target.password.value;
+    this.setState({ name, email, password, isRegistered: true });
+    // console.log(event.target.name.value);
+    // alert("How Are You")
+    event.preventDefault();
   };
 
-  toggleHandler(){
+  buttonClickHandler() {
+    console.log(this.state);
+  }
+
+  toggleHandler() {
     this.setState({ isShow: !this.state.isShow });
     // alert("")
   }
@@ -47,18 +63,18 @@ class App extends Component {
     const personsCopy = this.state.persons;
     // console.log(personsCopy);
     personsCopy.splice(personIndex, 1);
-    // console.log (personsCopy); 
+    // console.log (personsCopy);
     this.setState({ persons: personsCopy });
   };
 
   render() {
     let persons;
-    if(this.state.isShow){ 
+    if (this.state.isShow) {
       persons = this.state.persons.map((p, index) => {
         // return <Person key={index} name={p.name} age={p.age} remove={() => this.removeHandler(index)}/>;
       });
     } else {
-        persons = "";
+      persons = "";
     }
     // console.log(persons);
     return (
@@ -67,7 +83,17 @@ class App extends Component {
         {persons}
 
         {/* <Form /> */}
-        <ControlledComponent />
+        {/* <ControlledComponent /> */}
+        {/* <br /> */}
+        {this.state.isRegistered ? (
+          <Greet
+            name={this.state.name}
+            email={this.state.email}
+            password={this.state.password}
+          />
+        ) : (
+          <Register submit={this.registrationHandler} />
+        )}
 
         {/* <Person 
           name={this.state.Person[0].name}
@@ -82,14 +108,13 @@ class App extends Component {
           age={this.state.Person[2].age}
         /> */}
 
-
         {/* <button type="button" onClick={this.buttonClickHandler.bind(this)}>
           Click Me
         </button>
         <h1 className="Label">Testing</h1> */}
       </div>
     );
-  };
+  }
 }
 
 export default App;
