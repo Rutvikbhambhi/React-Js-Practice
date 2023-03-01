@@ -15,6 +15,7 @@ class App extends Component {
       name: null,
       email: null,
       password: null,
+      showPass: false,
       persons: [
         {
           name: "Rutvik",
@@ -52,6 +53,13 @@ class App extends Component {
 
   buttonClickHandler() {
     console.log(this.state);
+  }
+
+  showPasswordHandler = () => {
+    console.log(this.state);
+    this.setState({ showPass : !this.state.showPass }, () => {
+      console.log(this.state);
+    });
   }
 
   toggleHandler() {
@@ -92,7 +100,11 @@ class App extends Component {
             password={this.state.password}
           />
         ) : (
-          <Register submit={this.registrationHandler} />
+          <Register
+            submit={this.registrationHandler}
+            showPass={this.state.showPass}
+            click={this.showPasswordHandler}
+          />
         )}
 
         {/* <Person 
