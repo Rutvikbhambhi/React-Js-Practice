@@ -22,15 +22,16 @@ export default function Register(props) {
   }
   // console.log(btnClasses);
 
-  // Style Component
+  // Style Component 
   const StyledButton = styled.button`
-    display: block;
+    display: ${(props) => (props.flag ? "inline-block" : "block")};
     padding: 10px 5px;
-    background-color: orange;
+    background-color: ${(props) => props.bgcolor};
     border: none;
     color: white;
-    width: 100%;
+    width: ${(props) => (props.flag === "1" ? "45%" : "100%")};
     margin: 5px;
+    border-radius: 5px;
   `;
   // const StyledDiv = styled.div`
   //   background-color: red;
@@ -76,8 +77,10 @@ export default function Register(props) {
         <button type="button" className={btnClasses.join(" ")} onClick={props.click}>
           {btnText}
         </button>
-        <StyledButton type="button">Login</StyledButton>
-        <StyledButton type="button">T and C</StyledButton>
+        <StyledButton type="button" flag="1" bgcolor="orange">Login</StyledButton>
+        <StyledButton type="button" flag="1" bgcolor="red">Login with Google</StyledButton>
+        <StyledButton flag="0" bgcolor="blue">Login with Facebook</StyledButton>
+        {/* <StyledButton type="button">T and C</StyledButton> */}
         {/* <StyledDiv></StyledDiv> */}
       </form>
     </StyleRegisterContainer>
