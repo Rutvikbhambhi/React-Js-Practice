@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 
-export class Question extends Component {
-  render() {
+export default function Question (props) {
     return (
       <>
         <div className="container-fluid">
@@ -20,6 +19,7 @@ export class Question extends Component {
                         type="radio"
                         id="teacher"
                         name="q1"
+                        value="Teaching"
                         autoComplete="off"
                       />
                       <label htmlFor="teacher">Teaching</label>
@@ -27,6 +27,7 @@ export class Question extends Component {
                         type="radio"
                         id="student"
                         name="q1"
+                        value="Student"
                         className="mt-3"
                         autoComplete="off"
                       />
@@ -34,6 +35,7 @@ export class Question extends Component {
                       <input
                         type="radio"
                         id="programmer"
+                        value="Programmer"
                         name="q1"
                         autoComplete="off"
                       />
@@ -42,6 +44,7 @@ export class Question extends Component {
                         type="radio"
                         id="other"
                         name="q1"
+                        value="Other"
                         autoComplete="off"
                       />
                       <label htmlFor="teacher">Other</label>
@@ -95,6 +98,6 @@ export class Question extends Component {
       </>
     );
   }
-}
 
-export default Question;
+
+

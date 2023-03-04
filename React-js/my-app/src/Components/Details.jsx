@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
-export class Details extends Component {
-  render() {
+export default function Details (props) {
+//   render() {
     return (
       <>
         <div className="container-fluid">
@@ -9,7 +9,7 @@ export class Details extends Component {
             <div className="mt-3">
               <div className="card text-left">
                 <div className="card-body">
-                  <form>
+                  <form onSubmit={props.submit}>
                     <div className="form-group">
                       <label htmlFor="">
                         {" "}
@@ -21,6 +21,7 @@ export class Details extends Component {
                         className="form-control"
                         placeholder="Please enter your name"
                         autoComplete="off"
+                        required
                       />
                     </div>
                     <div className="form-group mt-3">
@@ -34,6 +35,7 @@ export class Details extends Component {
                         className="form-control"
                         placeholder="Please enter your email"
                         autoComplete="off"
+                        required
                       />
                     </div>
                     <button type="submit" className="btn btn-primary mt-3">Next</button>
@@ -50,6 +52,6 @@ export class Details extends Component {
       </>
     );
   }
-}
+// }
 
-export default Details;
+
