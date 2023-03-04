@@ -5,6 +5,7 @@ import "./App.css";
 // import ControlledComponent from "./Components/ControlledComponent";
 import Register from "./Components/Register";
 import Greet from "./Components/Greet";
+import Container from "./Components/Container";
 // import axios from "axios";
 
 class App extends Component {
@@ -57,10 +58,10 @@ class App extends Component {
 
   showPasswordHandler = () => {
     console.log(this.state);
-    this.setState({ showPass : !this.state.showPass }, () => {
+    this.setState({ showPass: !this.state.showPass }, () => {
       console.log(this.state);
     });
-  }
+  };
 
   toggleHandler() {
     this.setState({ isShow: !this.state.isShow });
@@ -106,6 +107,10 @@ class App extends Component {
             click={this.showPasswordHandler}
           />
         )}
+
+        <div style={{ backgroundColor: "dimgray" }}>
+          <Container />
+        </div>
 
         {/* <Person 
           name={this.state.Person[0].name}

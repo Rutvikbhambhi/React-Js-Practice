@@ -82,7 +82,7 @@ export default function Register(props) {
         <StyledButton flag="0" bgcolor="blue">Login with Facebook</StyledButton>
         {/* <StyledButton type="button">T and C</StyledButton> */}
         {/* <StyledDiv></StyledDiv> */}
-      </form>
+      </form>s
     </StyleRegisterContainer>
   );
 }
