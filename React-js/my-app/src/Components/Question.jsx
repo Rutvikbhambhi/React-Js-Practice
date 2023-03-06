@@ -1,6 +1,10 @@
 import React, { Component } from "react";
 
 export default function Question (props) {
+  const handleSubmit=(e)=>{
+    console.log(e.target);   
+    e.preventDefault();
+  }
     return (
       <>
         <div className="container-fluid">
@@ -8,7 +12,7 @@ export default function Question (props) {
             <div className="mt-3">
               <div className="card text-left">
                 <div className="card-body">
-                  <form>
+                  <form onSubmit={handleSubmit}>
                     <div className="form-group">
                       <label htmlFor="">
                         {" "}
@@ -44,7 +48,7 @@ export default function Question (props) {
                         type="radio"
                         id="other"
                         name="q1"
-                        value="Other"
+                        // value="Other"
                         autoComplete="off"
                       />
                       <label htmlFor="teacher">Other</label>
@@ -52,7 +56,8 @@ export default function Question (props) {
                       <input
                         type="text"
                         className="form-control mt-3"
-                        disabled
+                        // disabled
+                        name="other"
                         autoComplete="off"
                         placeholder="Type here if not listed"
                       />
@@ -63,7 +68,7 @@ export default function Question (props) {
                             <b>4.</b> Please rate our course.
                         </label>
                         <br />
-                        <input className="mt-3" type="radio" id="poor" name="q2" autoComplete="off" />
+                        <input  className="mt-3" type="radio" id="poor" name="q2" autoComplete="off" />
                         <label htmlFor="poor">Poor</label> {" "}
                         <input type="radio" id="good" name="q2" autoComplete="off" />
                         <label htmlFor="good">Good</label> {" "}
@@ -82,7 +87,7 @@ export default function Question (props) {
                         </label>
                         <textarea className="form-control mt-2" name="q3"></textarea>
                     </div>
-                    <button type="submit" className="btn btn-primary mt-3   ">
+                    <button type="submit" className="btn btn-primary mt-3">
                       Save
                     </button>
                   </form>
