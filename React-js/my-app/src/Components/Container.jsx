@@ -1,11 +1,32 @@
 import React, { Component } from "react";
 import Details from "./Details";
 import Question from "./Question";
+import { v4 as uuid4 } from 'uuid';
+// uuidv4();
+// import firebase from "firebase";
+// import firebase from "firebase";
 
+
+
+const { v4: uuidv4 } = require('uuid');
+uuidv4();
+const firebaseConfig = {
+  apiKey: "AIzaSyCLcmOyxkovQb0PVWidw0xwVCsXpgP-H_5",
+  authDomain: "ws-survey.firebaseapp.com",
+  databaseURL: "https://ws-survey-default-rtdb.firebase",
+  ProjectId: "ws-survey",
+  StorageBucket: "ws-survey.appspot.com",
+  MessagingSenderId: "542869075163",
+  appId: "1:542869075163:web:9ed2a81e45ff8516d148fe", 
+};
+// if (firebase.app.length < 0) {
+//   firebase.initializeApp(firebaseConfig);
+// }
 class Container extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      id: uuid4(),
       name: null,
       email: null,
       question: {
@@ -21,9 +42,7 @@ class Container extends Component {
   detailsSubmitHandler = (event) => {
     const name = event.target.name.value;
     const email = event.target.email.value;
-    this.setState({ name, email }, () => {
-      console.log(this.state);
-    });
+    this.setState({ name, email });
     event.preventDefault();
     // alert();
   };
@@ -35,10 +54,14 @@ class Container extends Component {
     question.q2 = event.target.q2.value;
     question.q3 = event.target.q3.value;
     question.other = event.target.other.value;
-    this.setState({ question }, () => {
-      console.log(this.state);
-    });
+    this.setState({ question });
     event.preventDefault();
+    // const database = firebase.database();
+    // database.ref("survey/"+ this.state.id).set({
+    //   name: this.state.name,
+    //   email: this.state.email,
+    //   questions: this.state.questions,
+    // });
   };
 
   render() {
