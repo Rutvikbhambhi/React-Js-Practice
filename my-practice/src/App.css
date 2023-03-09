@@ -17,4 +17,34 @@ h1{
   margin: 0;
 }
 
+.header {
+  background-color: rgb(23, 32, 135);
+  padding: 8px;
+}
+
+.main {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 14px;
+}
+
+.movie {
+  background-color: #d9d5d5;
+  color: black;
+  border: 1px solid grey;
+  padding: 3px;
+  font-weight: bold;
+  text-align: start;
+  width: 22%;
+  margin: 14px;
+}
+
+.movie img{
+  height: 300px;
+  width: 100%;
+}
+
+
+
 
