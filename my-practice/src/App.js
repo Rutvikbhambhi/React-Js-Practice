@@ -7,6 +7,13 @@ import movies from "./movie.json";
 function App() {
   // let name = "Rutvik";
 
+  function App() {
+    let login = false;
+
+    if (login == false) {
+      return <Header />
+    }
+  }
   return (
     <div className="App">
       {/* <h1>{name}</h1> */}
@@ -16,9 +23,10 @@ function App() {
       /> */}
       <Header />
       <div className="main">
-        {movies.map((element) => {
+        {movies.map((element, index) => {
           return (
             <Movie
+              key={index}
               title={element.Title}
               year={element.Year}
               img={element.Poster}
