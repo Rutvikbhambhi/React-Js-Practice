@@ -24,12 +24,34 @@ h1{
 
 .main {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 85vh;
   flex-wrap: wrap;
   padding: 14px;
 }
 
-.movie {
+.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn {
+  background-color: rgb(39, 39, 211);
+  color: white;
+  padding: 5px;
+  margin: 5px;
+}
+
+.heading {
+  color: black;
+  font-size: 80px; 
+}
+
+
+/* .movie {
   background-color: #d9d5d5;
   color: black;
   border: 1px solid grey;
@@ -43,7 +65,7 @@ h1{
 .movie img{
   height: 300px;
   width: 100%;
-}
+} */
 
 
 
