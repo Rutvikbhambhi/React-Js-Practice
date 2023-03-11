@@ -15,7 +15,8 @@ function Header() {
 
     <div className="header">
       {/* <h1>Movie Review</h1> */}
-      <h1>UseState Hook</h1>
+      {/* <h1>UseState Hook</h1> */}
+      <h1>Rutvik</h1>
     </div>
   );
 }

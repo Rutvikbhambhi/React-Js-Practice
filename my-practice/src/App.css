@@ -1,25 +1,26 @@
 .App {
   text-align: center;
-  background-color: #fff;
-  color: aliceblue;
-  min-height: 100vh;
+  /* background-color: #fff; */
+  color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* min-height: 100vh; */
 }
 
-.header {
-  background-color: yellow;
-}
-
-.footer {
+/* .footer {
   background-color: blue;
-}
+} */
 
 h1{
   margin: 0;
 }
 
 .header {
-  background-color: rgb(23, 32, 135);
-  padding: 8px;
+  color: white;
+  background-color: #192a56;
+  padding: 14px;
+  width: 100%;
 }
 
 .main {
@@ -48,6 +49,27 @@ h1{
 .heading {
   color: black;
   font-size: 80px; 
+}
+
+.form {
+  margin-top: 20px;
+}
+
+.data {
+  display: flex;
+  flex-direction: column;
+  margin-top: 15px;
+  align-items: center;
+  width: 100%;
+}
+
+.data_val {
+  display: flex;
+  justify-content: space-between;
+  width: 60%;
+  padding: 0px 10px;
+  /* background-color: rgb(229, 209, 182); */
+  box-shadow: rgba(20, 20, 20, 0.2) 0px 7px 29px 0px;
 }
 
 
