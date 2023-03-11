@@ -6,6 +6,7 @@ import Stack from "@mui/system/Stack";
 import AddIcon from "@mui/icons-material/Add";
 import { useState } from "react";
 import Fields from "./component/Fields";
+import DeleteIcon from "@mui/icons-material/Delete";
 // import Movie from "./component/Movie";
 // import movies from "./movie.json";
 // import Student from "./component/Student";
@@ -20,6 +21,10 @@ function App() {
     setName("");
     setEmail("");
   };
+
+  const removeItem = (index) => {
+
+  }
 
   // function inc(n) {
   //   setNum(num + n);
@@ -77,7 +82,7 @@ function App() {
             label="email"
             variant="outlined"
           />
-          <Button variant="contained" color="error">
+          <Button onClick={addData} variant="contained" color="success">
             <AddIcon />
           </Button>
         </Stack>
@@ -89,14 +94,30 @@ function App() {
           <h4>Email</h4>
           <h4>Remove</h4>
         </div>
-        {
+
+        {/* {
           data.map((element, index) => {
             return (
               <Fields key={index} name={element.name} email={element.email} index={index} />
             )
           })
-        }
+        } */}
+
       </div>
+
+      {data.map((element, index) => {
+        return (
+          <div className="data_val">
+            <h4>{element.name}</h4>
+            <h4>{element.email}</h4>
+            <Stack>
+              <Button onClick={() => removeItem(index)} variant="contained" color="error">
+                <DeleteIcon />
+              </Button>
+            </Stack>
+          </div>
+        )
+      })}
 
       {/* <div className="main">
         <h1 className="heading">{num}</h1>
