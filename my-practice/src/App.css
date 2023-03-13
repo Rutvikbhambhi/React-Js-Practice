@@ -1,5 +1,4 @@
 .App {
-  text-align: center;
   /* background-color: #fff; */
   color: black;
   display: flex;
@@ -20,6 +19,7 @@ h1{
   color: white;
   background-color: #192a56;
   padding: 14px;
+  text-align: center;
   width: 100%;
 }
 
