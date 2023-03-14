@@ -19,7 +19,7 @@ h1{
   color: white;
   background-color: #192a56;
   padding: 14px;
-  text-align: center;
+  text-align: ce  nter;
   width: 100%;
 }
 
@@ -57,7 +57,9 @@ h1{
 
 .data {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  /* flex-direction: column; */
+  padding: 5px;
   margin-top: 15px;
   align-items: center;
   width: 100%;

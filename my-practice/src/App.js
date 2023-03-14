@@ -12,19 +12,48 @@ import { useState, useEffect } from "react";
 // import Student from "./component/Student";
 
 function App() {
+  const [state, setState] = useState(2);
+  const [data, setData] = useState([]);
+  // const [state2, setState2] = useState(0);
 
   useEffect(() => {
-    // const []
+    // console.log("useEffect Called");
+    // window.alert("useEffect Called");
+    async function getData() {
+      const get = await fetch(`https://hub.dummyapis.com/employee?noofRecords=$
+      {state}&idStarts=1001`);
 
-    console.log("useEffect Called");
-  })
+        const res = await get.json();
 
-  console.log("Function Body");
+        setData(res)
+        // console.log(res);
+    }
+
+    getData();
+
+    Document.title = `(${state}) Employees Online`;
+
+  });
+
+  console.log("Function Body ");
 
   return (
     <div>
       <Header />
-      {console.log("Inside Jsx")}
+      {/* {console.log("Inside JSX")} */}
+      <button onClick={() => setState(state+2)}>Click Me {state}</button>
+      {
+        data.map((element, index) => {
+          return (
+            <div className="data" key={index}>
+              <h4>{element.firstName}</h4>
+              <h4>{element.lastName}</h4>
+              <h4>{element.email}</h4>
+            </div>
+          )
+        })
+      }
+      {/* <button onClick={() => setState2(state2 + 1)}>Click Me {state2}</button> */}
     </div>
   );
 }
