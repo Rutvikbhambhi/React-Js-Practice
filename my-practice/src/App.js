@@ -31,7 +31,7 @@ function App() {
 
     getData();
 
-    Document.title = `(${state}) Employees Online`;
+    document.title = `(${state}) Employees Online`;
 
   });
 
