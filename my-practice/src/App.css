@@ -16,11 +16,12 @@ h1{
 }
 
 .header {
-  color: white;
   background-color: #192a56;
-  padding: 14px;
-  text-align: ce  nter;
-  width: 100%;
+  display: flex;
+  padding: 14px 10px;
+  text-align: center;
+  /* width: 100%; */
+  justify-content: space-evenly;
 }
 
 .main {
