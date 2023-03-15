@@ -24,6 +24,7 @@ import {
 import Error from "./component/Error";
 import Insta from "./component/Insta";
 import Mail from "./component/Mail";
+import Userdetails from "./component/Userdetails";
 
 function App() {
   // const [state, setState] = useState(2);
