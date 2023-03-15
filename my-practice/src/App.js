@@ -59,18 +59,22 @@ function App() {
         {/* <Home /> */}
         <Routes>
           {/* Home */}
-          <Route path="/app" element={<Home />} />
+          <Route path="/">
+            <Route index element={<Home />} />
+
+            <Route path="/userId" element={<Userdetails />} />
+            <Route path="/app" element={<Home />} />
+          </Route>
 
           {/* About */}
           <Route path="/about" element={<About />} />
 
           {/* Contact */}
           <Route path="/contact" element={<Contact />} />
-          <Route path="/insta" element={<Insta />} />
-          <Route path="/mail" element={<Mail />} />
+            <Route path="/insta" element={<Insta />} />
+            <Route path="/mail" element={<Mail />} />
 
           <Route path="*" element={<Error />} />
-
         </Routes>
       </div>
     </Router>
