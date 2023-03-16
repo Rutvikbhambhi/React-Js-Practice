@@ -1,8 +1,8 @@
-import { createSlice } from "@reduxjs/toolkit";
 import { combineReducers } from "@reduxjs/toolkit";
+import { reducer } from "react";
 import amountReducer from "./amountReducer";
 
-export default reducer  = combineReducers({
+ const Reducer = combineReducers({
     amount: amountReducer
     // name: 'incdec',
     // initialState: 20,
@@ -17,4 +17,4 @@ export default reducer  = combineReducers({
 })
 
 // export const {Inc, Dec} = incdecSlice.actions;
-// export default incdecSlice.reducer;
+export default Reducer;
