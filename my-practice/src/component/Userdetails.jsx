@@ -25,7 +25,8 @@ const Userdetails = () => {
   return (
     <>
       <h4>{data.id}</h4>
-      <img src={data.imageUrl} />
+      <img src={data.imageUrl} /
+      >
       <h4>{data.firstName}</h4>
       <h4>{data.lastName}</h4>
       <h4>{data.email}</h4>

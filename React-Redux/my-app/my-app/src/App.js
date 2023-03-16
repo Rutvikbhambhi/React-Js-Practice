@@ -2,6 +2,7 @@ import React from "react";
 // import "./App.css";
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
+import Navbar from "./Navbar";
 import {Inc, Dec} from './states/reducers/index'
 
 function App() {
@@ -9,9 +10,9 @@ function App() {
   const dispatch = useDispatch();
 
   return (
-    <>
-      <h1>React Redux</h1>
-      <div
+    <div className="App">
+      <Navbar />
+      {/* <div
         style={{
           width: "100%",
           display: "flex",
@@ -25,8 +26,8 @@ function App() {
           <button onClick={() => dispatch(Inc(10))}>Inc</button>
           <button onClick={() => dispatch(Dec(5))}>Dec</button>
         </div>
-      </div>
-    </>
+      </div> */}
+    </div>
   );
 }
 
