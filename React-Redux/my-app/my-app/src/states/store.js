@@ -1,8 +1,8 @@
-import { configureStore } from "@reduxjs/toolkit";
+// import { configureStore } from "@reduxjs/toolkit";
+import { Thunk } from "redux-thunk";
+import { applyMiddleware, createStore } from "redux";
+import reducers from "./reducers/index";
 import incdecReducer from "./reducers/index";
+import { Store } from "react-redux";
 
-export default configureStore({
-    reducer: {
-        number: incdecReducer,
-    }
-}, window._REDUX_DEVTOOLS_EXTENSION_ && window._REDUX_DEVTOOLS_EXTENSION_())
+export default Store = createStore(reducers, {}, applyMiddleware(Thunk))

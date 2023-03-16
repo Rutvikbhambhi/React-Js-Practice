@@ -3,16 +3,19 @@ import React from "react";
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 import Navbar from "./Navbar";
-import {Inc, Dec} from './states/reducers/index'
+import Shop from "./Shop";
+import { Inc, Dec } from "./states/reducers/index";
 
 function App() {
-  const curState = useSelector ((state) => state.number);
+  const curState = useSelector((state) => state.number);
   const dispatch = useDispatch();
 
   return (
-    <div className="App">
+    <>
       <Navbar />
-      {/* <div
+      <div className="container">
+        <Shop />
+        {/* <div
         style={{
           width: "100%",
           display: "flex",
@@ -27,7 +30,8 @@ function App() {
           <button onClick={() => dispatch(Dec(5))}>Dec</button>
         </div>
       </div> */}
-    </div>
+      </div>
+    </>
   );
 }
 
