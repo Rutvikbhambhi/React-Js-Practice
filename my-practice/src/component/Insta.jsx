@@ -3,9 +3,9 @@ import React from 'react'
 const Insta = () => {
   return (
     <div>
-      <div>Insta</div>
+      <div>insta</div>
     </div>
   )
 }
 
-export default Insta 
+export default Insta ;

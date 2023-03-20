@@ -70,10 +70,10 @@ function App() {
           <Route path="/about" element={<About />} />
 
           {/* Contact */}
-          <Route path="/contact" element={<Contact />} />
-            <Route path="/insta" element={<Insta />} />
-            <Route path="/mail" element={<Mail />} />
-
+          <Route path="/contact" element={<Contact />}  >
+            <Route path="insta" element={<Insta />} />
+            <Route path="mail" element={<Mail />} />
+            </Route>
           <Route path="*" element={<Error />} />
         </Routes>
       </div>

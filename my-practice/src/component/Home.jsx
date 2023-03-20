@@ -2,7 +2,7 @@ import React, {useState, useEffect} from "react";
 import { Link } from "react-router-dom";
 
 const Home = () => {
-  const [state, setState] = useState(2);
+  const [state, setState] = useState(0);
   const [data, setData] = useState([]);
 
   useEffect(() => {
@@ -27,7 +27,7 @@ const Home = () => {
   return (
     <div>
       {/* {console.log("Inside JSX")} */}
-      <button onClick={() => setState(state+2)}>Click Me {state}</button>
+      <button onClick={() => setState(state+1)}>Click Me {state}</button>
       {
         data.map((element, index) => {
           return (
