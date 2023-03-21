@@ -1,13 +1,16 @@
 import React from 'react'
 import './App.css'
 import Navbar from './Navbar'
+import Shop from './Shop'
 
 function App() {
   return (
-    <div className='App'>
-      <h1 className='bg'>App Component</h1>
-    <Navbar />
-    </div>
+    <>
+      <Navbar />
+      <div className="container">
+        <Shop />
+      </div>
+    </>
   )
 }
 
