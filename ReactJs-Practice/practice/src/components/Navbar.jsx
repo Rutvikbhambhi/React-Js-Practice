@@ -40,6 +40,7 @@ const Nav = styled.nav`
   justify-content: space-between;
   align-item: center;
   padding: 0 4vw;
+  background: #f9c74f;
   .brand {
     img {
       ${"" /* margin-top: 1rem; */}
@@ -65,13 +66,14 @@ const Nav = styled.nav`
       text-decoration: none;
       text-transform: uppercase;
       letter-spacing: 0.1rem;
-      transition: 0ms.3s ease-in-out;
+      transition: 0.5s;
+
       &:hover {
-        color: #f9c74f;
+        color: #ECE917;
       }
     }
     .active {
-      color: #f9c74f;
+      color: #ECE917;
     }
   }
 `;
