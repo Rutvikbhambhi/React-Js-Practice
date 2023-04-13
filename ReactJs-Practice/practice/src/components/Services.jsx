@@ -1,8 +1,9 @@
 import React from "react";
 import styled from "styled-components";
-// import Services1 from "../assets/Services1"
-// import Services2 from "../assets/Services2"
-// import Services3 from "../assets/Services3"
+import Services1 from "../assets/Services1.png"
+import Services2 from "../assets/Services2.png"
+import Services3 from "../assets/Services3.png"
+// import ReusableStyles from "../components/ReusableStyles"
 
 export default function Services() {
   return (
@@ -16,28 +17,31 @@ export default function Services() {
         </div>
         <div className="services">
             <div className="service1">
-                {/* <img src={Services1} alt="" /> */}
+                <img src={Services1} alt="" />
                 <p>Lorem ipsum dolor sit amet consectetur. <span>Lorem ipsum</span>{" "}  adipisicing elit. 
                 Accusamus, quo.</p>
                 <button>Read More</button>
             </div>
             <div className="service">
-                {/* <img src={Services2} alt="" /> */}
+                <img src={Services2} alt="" />
                 <p>Lorem ipsum dolor sit amet consectetur. <span>Lorem ipsum</span>{" "}  adipisicing elit. 
                 Accusamus, quo.</p>
                 <button>Read More</button>
             </div>
             <div className="service">
-                {/* <img src={Services3} alt="" /> */}
+                <img src={Services3} alt="" />
                 <p>Lorem ipsum dolor sit amet consectetur. <span>Lorem ipsum</span>{" "}  adipisicing elit. 
                 Accusamus, quo.</p>
                 <button>Read More</button>
             </div>
         </div>
+
+        {/* <ReusableStyles /> */}
     </Section>
   );
 }
 
 const Section = styled.section`
-    `;
+    margin: 2rem 4rem;
+`;
    

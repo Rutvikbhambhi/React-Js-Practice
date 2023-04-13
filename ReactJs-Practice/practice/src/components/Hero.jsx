@@ -38,7 +38,7 @@ const Section = styled.section`
     width: 100%;
     height: 600px;
     overflow: hidden;
-    
+
     img {
       height: 100%;
       width: 100%;
@@ -96,6 +96,7 @@ const Section = styled.section`
         font-size: 4rem;
         letter-spacing: 0ch.5rem;
       }
+
       em {
         color: white;
         width: 60%;
@@ -113,7 +114,7 @@ const Section = styled.section`
         border: none;
         border-radius: 1vh;
         cursor: pointer;
-        transition: 0ms.3s ease-in-out;
+        transition: 1s ease-in-out;
 
         &:hover {
           background-color: #f9c74f;
