@@ -1,0 +1,59 @@
+.App {
+  text-align: center;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 657px;
+}
+
+form {
+  background-color: cadetblue;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 60%;
+  width: 500px;
+  border-radius: 10px;
+}
+
+input {
+  padding: 10px 10px;
+  margin: 5px;
+  justify-content: flex-start;
+  outline: none;
+  border-radius: 4px;
+  border: none;
+  font-family: sans-serif;
+}
+
+label {
+  font-family: sans-serif;
+  font-size: 20px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+button {
+  padding:10px 10px;
+  margin: 8px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.showDataStyle {
+  display: flex;
+}
+
+
+.showDataStyle p{
+  color: aliceblue;
+  padding: 0px 20px;
+}
+
+
+
+
