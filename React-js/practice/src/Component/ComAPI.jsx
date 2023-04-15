@@ -3,24 +3,31 @@ import axios from "axios";
 
 const ComAPI = () => {
   const [num, setNum] = useState();
-  const [name, setName] = useState();
-  const [moves, setMoves] = useState();
+  const [brand, setBrand] = useState();
+  const [stock, setstock] = useState();
 
   useEffect(() => {
     async function getData() {
       const res = await axios.get(`https://dummyjson.com/products/${num}`);
       console.log(res.data);
-      setName(res.data.name);
-      setMoves(res.data.moves.length);
+      setBrand(res.data.brand);
+      setstock(res.data.images.length);
     }
 
     getData();
   });
   return (
     <div>
-      <h1 style={{color: "white"}}>You Choose <span style={{ color: "red" }}>{num} Value</span></h1>
-      <h1 style={{color: "white"}}>My Name is<span style={{ color: "red" }}>{name}</span></h1>
-      <h1 style={{color: "white"}}>I have <span style={{ color: "red" }}>{moves} Moves</span></h1>
+      <h1 style={{ color: "white" }}>
+        You Choose <span style={{ color: "red" }}>{num} Value</span>
+      </h1>
+      <h1 style={{ color: "white" }}>
+        My Brand is<span style={{ color: "red" }}> {brand}</span>
+      </h1>
+      <h1 style={{ color: "white" }}>
+        Mobile <span style={{ color: "red" }}>{stock} Stock </span>
+      </h1>
+
       <select
         value={num}
         onChange={(event) => {
