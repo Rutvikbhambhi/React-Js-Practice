@@ -1,98 +1,50 @@
 [
   {
-    "imdbID": "tt0096895",
-    "Title": "Batman",
-    "Year": "1989",
-    "Poster": "https://m.media-amazon.com/images/M/MV5BOGE2NWUwMDItMjA4Yi00N2Y3LWJjMzEtMDJjZTMzZTdlZGE5XkEyXkFqcGdeQXVyODk4OTc3MTY@._V1_.jpg"
+    "Title": "The Lion King",
+    "Year": "2019",
+    "Runtime": "118 min",
+    "Poster": "https://m.media-amazon.com/images/M/MV5BMjIwMjE1Nzc4NV5BMl5BanBnXkFtZTgwNDg4OTA1NzM@._V1_SX300.jpg"
   },
   {
-    "imdbID": "tt0468569",
-    "Title": "The Dark knight",
-    "Year": "2008",
-    "Poster": "https://images.moviesanywhere.com/bd47f9b7d090170d79b3085804075d41/c6140695-a35f-46e2-adb7-45ed829fc0c0.jpg"
-  },
-  {
-    "imdbID": "tt2975590",
-    "Title": "Batman v Superman: Dawn of justice",
-    "Year": "2016",
-    "Poster": "https://assets-in.bmscdn.com/iedb/movies/images/extra/vertical_logo/mobile/thumbnail/xxlarge/batman-v-superman-dawn-of-justice-et00030143-10-03-2022-10-28-16.jpg"
-  },
-  {
-    "imdbID": "tt1345836",
-    "Title": "The Dark knight Rises",
-    "Year": "2012",
-    "Poster": "https://images.moviesanywhere.com/137de7df53b44414af057f89c0647b0b/38dd4c91-6758-46bd-969b-6acf010a249b.jpg"
-  },
-  {
-    "imdbID": "tt0372784",
-    "Title": "Batman Begins",
-    "Year": "2005",
-    "Poster": "https://fr.web.img3.acsta.net/pictures/22/10/04/08/52/2484953.jpg"
-  },
-  {
-    "imdbID": "tt4116284",
-    "Title": "The LEGO Batman Movie",
-    "Year": "2017",
-    "Poster": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVZ05e4dPvY1-6dFqFHg8gTn4pwq6iGOdxpg90ewhK6wYp6OgmnoDyjlONcl5ZEpOSZBY&usqp=CAU"
-  },
-  {
-    "imdbID": "tt0112462",
-    "Title": "Batman Forever",
-    "Year": "1995",
-    "Poster": "https://upload.wikimedia.org/wikipedia/en/3/34/Batman_Forever_soundtrack.jpg"
-  },
-  {
-    "imdbID": "tt0118688",
-    "Title": "Batman & Robin",
-    "Year": "1997",
-    "Poster": "https://m.media-amazon.com/images/M/MV5BMGQ5YTM1NmMtYmIxYy00N2VmLWJhZTYtN2EwYTY3MWFhOTczXkEyXkFqcGdeQXVyNTA2NTI0MTY@._V1_.jpg"
-  },
-  {
-    "imdbID": "tt0103776",
-    "Title": "Batman Return",
-    "Year": "1992",
-    "Poster": "https://m.media-amazon.com/images/M/MV5BOGZmYzVkMmItM2NiOS00MDI3LWI4ZWQtMTg0YWZkODRkMmViXkEyXkFqcGdeQXVyODY0NzcxNw@@._V1_.jpg"
-  },
-  {
-    "imdbID": "tt0076759",
-    "Title": "Star Wars",
-    "Year": "1977",
-    "Poster": "https://res.cloudinary.com/dyx4yhvoq/image/upload/v1546786657/5c266428c2172c001bc94b9e/q0qwga6ic6mt2nlxazxt.jpg"
-  },
-  {
-    "imdbID": "tt0076759",
-    "Title": "IronMan",
-    "Year": "2008",
-    "Poster": "https://m.media-amazon.com/images/M/MV5BMTczNTI2ODUwOF5BMl5BanBnXkFtZTcwMTU0NTIzMw@@._V1_FMjpg_UX1000_.jpg"
-  },
-  {
-    "imdbID": "tt0076759",
-    "Title": "Avengers",
+    "Title": "Mowgli: Legend of the Jungle",
     "Year": "2018",
-    "Poster": "https://cdn.marvel.com/content/1x/avengersinfinitywar_lob_crd_02.jpg"
+    "Runtime": "104 min",
+    "Poster": "https://m.media-amazon.com/images/M/MV5BMjMzODc2NzU5MV5BMl5BanBnXkFtZTgwNTMwMTE3NjM@._V1_SX300.jpg"
   },
   {
-    "imdbID": "tt0076759",
-    "Title": "Avatar",
-    "Year": "2009",
-    "Poster": "https://www.scrolldroll.com/wp-content/uploads/2020/01/Avatar-2009-Must-Watch-Hollywood-Movies.jpg"
+    "Title": "Doctor Strange",
+    "Year": "2016",
+    "Runtime": "115 min",
+    "Poster": "https://m.media-amazon.com/images/M/MV5BNjgwNzAzNjk1Nl5BMl5BanBnXkFtZTgwMzQ2NjI1OTE@._V1_SX300.jpg"
   },
   {
-    "imdbID": "tt0076759",
-    "Title": "Avatar2",
+    "Title": "John Wick",
+    "Year": "2014",
+    "Runtime": "101 min",
+    "Poster": "https://m.media-amazon.com/images/M/MV5BMTU2NjA1ODgzMF5BMl5BanBnXkFtZTgwMTM2MTI4MjE@._V1_SX300.jpg"
+  },
+  {
+    "Title": "The Notebook",
+    "Year": "2004",
+    "Runtime": "123 min",
+    "Poster": "https://resizing.flixster.com/rqWKjj5mjYXtyxe0pLorFt4OsqI=/206x305/v2/https://flxt.tmsimg.com/NowShowing/35555/35555_aa.jpg"
+  },
+  {
+    "Title": "A Fairy Tale After All",
     "Year": "2022",
-    "Poster": "https://i.pinimg.com/564x/76/2f/fa/762ffa968a2f4ab48b9a915cebe58b85.jpg"
+    "Runtime": "72mins",
+    "Poster": "https://www.naijaprey.com/wp-content/uploads/2022/02/A-Fairy-Tale-After-All.jpg"
   },
   {
-    "imdbID": "tt0076759",
-    "Title": "Thor: The Dark World",
-    "Year": "2013",
-    "Poster": "http://im.rediff.com/movies/2013/dec/30hollywood-films3.jpg"
+    "Title": "Doctor Strange 2",
+    "Year": "2022",
+    "Runtime": "72mins",
+    "Poster": "https://upload.wikimedia.org/wikipedia/en/thumb/1/17/Doctor_Strange_in_the_Multiverse_of_Madness_poster.jpg/220px-Doctor_Strange_in_the_Multiverse_of_Madness_poster.jpg"
   },
   {
-    "imdbID": "tt0076759",
-    "Title": "Captain America",
-    "Year": "2012",
-    "Poster": "https://prashantb.files.wordpress.com/2011/11/latest-captain-america-movie-poster-inspires-nerd-awe.jpg"
+    "Title": "Beast",
+    "Year": "2022",
+    "Runtime": "101 min",
+    "Poster": "https://spoilerfreereviews.com/wp-content/uploads/2022/08/Beast-Poster-1.jpeg"
   }
 ]

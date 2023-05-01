@@ -1,97 +1,92 @@
 .App {
-  /* background-color: #fff; */
-  color: black;
+  text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* min-height: 100vh; */
-}
-
-/* .footer {
-  background-color: blue;
-} */
-
-h1{
-  margin: 0;
 }
 
 .header {
-  background-color: #192a56;
+  background-color: rgb(23, 31, 79);
+  color: aliceblue;
+  /* padding: 5px; */
+  width: 100%;
+}
+
+.data {
   display: flex;
-  padding: 14px 10px;
-  text-align: center;
-  /* width: 100%; */
-  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: center;
+  margin: 15px 0px;
+  width: 100%;
+}
+
+.data-1 {
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+  /* background-color: rgb(130, 121, 121); */
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  padding: 0px 40px;
 }
 
 .main {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  height: 85vh;
+  height: 550px;
+}
+
+/* .main {
+  display: flex;
+  justify-content: space-between;
   flex-wrap: wrap;
-  padding: 14px;
-}
-
-.buttons {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.btn {
-  background-color: rgb(39, 39, 211);
-  color: white;
-  padding: 5px;
-  margin: 5px;
-}
-
-.heading {
-  color: black;
-  font-size: 80px; 
-}
-
-.form {
-  margin-top: 20px;
-}
-
-.data {
-  display: flex;
-  justify-content: space-between;
-  /* flex-direction: column; */
-  padding: 5px;
-  margin-top: 15px;
-  align-items: center;
-  width: 100%;
-}
-
-.data_val {
-  display: flex;
-  justify-content: space-between;
-  width: 60%;
-  padding: 0px 10px;
-  /* background-color: rgb(229, 209, 182); */
-  box-shadow: rgba(20, 20, 20, 0.2) 0px 7px 29px 0px;
-}
-
-
-/* .movie {
-  background-color: #d9d5d5;
-  color: black;
-  border: 1px solid grey;
-  padding: 3px;
-  font-weight: bold;
-  text-align: start;
-  width: 22%;
-  margin: 14px;
-}
-
-.movie img{
-  height: 300px;
-  width: 100%;
+  padding: 10px;
 } */
 
+.movie {
+  background-color: rgb(200, 186, 167);
+  border: 1px solid grey;
+  padding: 5px;
+  font-weight: 700;
+  text-align: start;
+  width: 300px;
+  margin: 1px 10px 6px 13px;
+}
 
+.movie img {
+  height: 400px;
+  width: 100%;
+}
 
+button {
+  font-size: 20px;
+  padding: 20px 30px;
+  margin: 0 5px;
+  border: none;
+  border-radius: 5px;
+  background-color: cornflowerblue;
+}
 
+/* .key {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+} */
+
+.form {
+  border: 2px solid goldenrod;
+  width: 40%;
+  margin: 10px;
+}
+
+input {
+  padding: 10px;
+  margin: 10px;
+  font-size: 15px;
+  font-family: 'Times New Roman', Times, serif;
+  width: 50%;
+}
+
+.footer {
+  background-color: rgb(12, 199, 77);
+}
