@@ -9,7 +9,7 @@ const initialState = {
 }
 
 export const signUpUser = createAsyncThunk('signupuser',async(body)=>{
-    const res = await fetch("dddddddddddfffffffffffffffdd",{
+    const res = await fetch("http://localhost:8000/users",{
         method: "post",
         headers: {
             'Content-Type': "application/json",
@@ -26,7 +26,6 @@ const authSlice = createSlice({
     name: "user",
     initialState,
     reducers:{
-
         addToken: (state,action)=>{
             state.token = localStorage.getItem("token")
         },
