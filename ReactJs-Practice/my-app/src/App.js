@@ -4,6 +4,8 @@ import Header from './Components/Header';
 import Home from './Components/Home';
 import Error from './Components/Error';
 import Login from './Components/Login';
+import Details from './Components/Details';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import {
   // Router,
   // Routes,
@@ -216,6 +218,14 @@ const App = createBrowserRouter([
   {
     path: "/login",
     element: <Login />,
+  },
+  {
+    path: "/details",
+    element: <Details />,
+  },
+  {
+    path: "*",
+    element: <Error />,
   }
 ]);
 export default App;
