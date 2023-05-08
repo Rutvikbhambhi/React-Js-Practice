@@ -1,0 +1,130 @@
+.App {
+  /* text-align: center; */
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+}
+
+.header {
+  background-color: rgb(23, 31, 79);
+  color: aliceblue;
+  /* padding: 5px; */
+  width: 100%;
+}
+
+.data {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 15px 0px;
+  width: 100%;
+}
+
+.data-1 {
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  padding: 0px 40px;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 550px;
+}
+
+/* .main {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 10px;
+} */
+
+.movie {
+  background-color: rgb(200, 186, 167);
+  border: 1px solid grey;
+  padding: 5px;
+  font-weight: 700;
+  text-align: start;
+  width: 300px;
+  margin: 1px 10px 6px 13px;
+}
+
+.movie img {
+  height: 400px;
+  width: 100%;
+}
+
+button {
+  font-size: 20px;
+  padding: 20px 0;
+  margin: 0 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(5, 183, 73);
+  width: 480px;
+}
+
+/* .key {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+} */
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  text-align: center;
+  /* border: 2px solid goldenrod; */
+  
+}
+
+.login {
+  margin-top: 70px;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  height: 500px;
+}
+
+input {
+  padding: 10px;
+  margin: 18px;
+  font-size: 20px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif, Times, serif;
+  width: 450px;
+  border: 2px solid goldenrod;
+  outline: none;
+}
+
+.input h2 {
+  font-size: 40px;
+}
+
+.about {
+  background-color: rgb(23, 31, 79);
+}
+
+.contact {
+  background-color: rgb(23, 31, 79);
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.img {
+  margin-top: 80px;
+}
+
+.input p {
+  font-size: 25px;
+}
+
+.footer {
+  background-color: rgb(12, 199, 77);
+}

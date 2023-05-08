@@ -1,0 +1,12 @@
+
+.about {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.movie-img {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 500px;
+}
