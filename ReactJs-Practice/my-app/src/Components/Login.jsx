@@ -45,8 +45,8 @@ const Login = () => {
 		} else {
 			if (getuserArr && getuserArr.length) {
 				const userdata = JSON.parse(getuserArr);
-				// console.log(userdata);
-				const userlogin = userdata.filter((el, r) => {
+				const userlogin = userdata.filter((el) => {
+					// console.log(userlogin);
 					return el.email === email && el.password === password;
 				});
 
