@@ -75,9 +75,6 @@ const Details = () => {
                         </Modal.Footer>
                     </Modal>:""
                     }
-
-
-
                 </>
             }
         </div>

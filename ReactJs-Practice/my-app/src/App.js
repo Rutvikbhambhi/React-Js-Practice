@@ -208,6 +208,10 @@ const App = createBrowserRouter([
     element: <Header />,
   },
   {
+    path: "/home",
+    element: <Home />,
+  },
+  {
     path: "/about",
     element: <About />,
   },

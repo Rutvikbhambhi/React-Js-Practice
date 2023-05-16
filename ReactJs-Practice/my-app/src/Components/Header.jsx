@@ -13,7 +13,7 @@ const Header = () => {
         <h1>Home</h1>
       </a> */}
 
-      <Link to="/" style={{ color: "red", textDecoration: "none" }}>
+      <Link to="/home" style={{ color: "red", textDecoration: "none" }}>
         <h1>Home</h1>
       </Link>
 
