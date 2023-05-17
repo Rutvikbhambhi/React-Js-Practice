@@ -1,4 +1,4 @@
-// import React from 'react'
+  // import React from 'react'
 // import { useEffect, useState } from 'react';
 
 // const Home = () => {
@@ -75,7 +75,9 @@ export class Home extends Component {
 
 	async componentDidMount() {
 		console.log('Rutvik');
-    let url = "https://dummyjson.com/products"
+    let url = "https://dummyjson.com/todos";
+    // https://newsapi.org/v2/top-headlines?country=in&apiKey=db57b028aeb41e285a226a94865f7a7
+    // https://dummyjson.com/products
     let data = await fetch(url);
     let parsedData = await data.json();
     console.log(parsedData);
@@ -90,7 +92,12 @@ export class Home extends Component {
         <div className="row">
           {this.state.articles?.map((element) => {
             return <div className="col-md-4" key={element.url}>
-              <Product title={element.title?element.title.slice(0, 45):""} description={element.description?element.description.slice(0, 88):""}
+              <Product title={element.title} id={element.id} 
+                  todo={element.Todo}
+                  completed={element.Completed}
+                  userId={element.UserId}
+              />
+              {/* <Product title={element.title?element.title.slice(0, 45):""} description={element.description?element.description.slice(0, 88):""}
               // imageUrl={element.urlToImage} newsUrl={element.url} 
               id={element.Id} 
               // description={element.description}
@@ -102,7 +109,7 @@ export class Home extends Component {
               category={element.Category}
               thumbnail={element.Thumbnail}
               images={element.Images}
-              />
+              /> */}
             </div>
           })}
         </div>
