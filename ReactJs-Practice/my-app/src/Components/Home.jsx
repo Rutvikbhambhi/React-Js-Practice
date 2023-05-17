@@ -91,9 +91,10 @@ export class Home extends Component {
         <h2>Top Headlines</h2>
         <div className="row">
           {this.state.articles?.map((element) => {
-            return <div className="col-md-4" key={element.url}>
+            <div className="col-md-4" key={element.url}>
               <Product title={element.title} id={element.id} 
                   todo={element.Todo}
+                  todos={element.Todos}
                   completed={element.Completed}
                   userId={element.UserId}
               />
