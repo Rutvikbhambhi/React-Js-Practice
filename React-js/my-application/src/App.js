@@ -2,6 +2,8 @@
 import Users from './Users';
 import './App.css';
 import { useState } from 'react';
+import Profile from './Profile';
+import Login from './Login';
 
 
 function App() {
@@ -21,6 +23,16 @@ function App() {
   // }
 
   // const [name, setName] = useState("Rutvik");
+
+
+  const [name, setName] = useState("");
+  const [tnc, setTnc] = useState(false);
+  const [interest, setinterest] = useState("");
+  function getFormData(e) {
+    e.preventDefault()
+    console.log(name, interest, tnc);
+  }
+
   return (
     <div className="App">
       {
@@ -30,16 +42,37 @@ function App() {
       }
       {/* <button onClick={increment}>Click Me</button> */}
       {/* <button onClick={decrement}>Click Me</button> */}
-      <Users
-      // name={name} 
-      // age={10}
-      // email={"meet@gmail.com"}
-      // other={{address: 'khedbrahma', mobile: "5674964658"}}
-      />
+      {/* <Users
+      name={name} 
+      age={10}
+      email={"meet@gmail.com"}
+      other={{address: 'khedbrahma', mobile: "5674964658"}}
+      /> */}
+      <Profile />
+      <Login />
       {/* <button onClick={()=>{setName("meet")}}>Update Name</button> */}
 
       {/* <input type="text" onChange={getData} /> */}
       {/* <button onClick={() => setPrint(true)}>Print</button> */}
+
+      {/* <div className='from'>
+        <h1>Handle Form in React</h1>
+        <form onSubmit={getFormData}>
+          <input type='text' placeholder='Enter Name' onChange={(e) => setName(e.target.value)}/> 
+          <br /><br />
+          <select onChange={(e) => setinterest(e.target.value)}>
+            <option>select</option>
+            <option>Spider Man</option>
+            <option>Iron Man</option>
+            <option>Super Man</option>
+          </select> 
+          <br /><br />
+          <input type='checkbox' onChange={(e) => setTnc(e.target.checked)} />
+          <span>Accept Terms and conditions</span>
+          <br /><br />
+          <button type='submit'>Submit</button>
+        </form>
+      </div> */}
     </div >
   );
 }
