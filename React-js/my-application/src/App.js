@@ -38,8 +38,8 @@ function App() {
       />
       {/* <button onClick={()=>{setName("meet")}}>Update Name</button> */}
 
-      <input type="text" onChange={getData} />
-      <button onClick={() => setPrint(true)}>Print</button>
+      {/* <input type="text" onChange={getData} /> */}
+      {/* <button onClick={() => setPrint(true)}>Print</button> */}
     </div >
   );
 }
