@@ -8,6 +8,8 @@ function Login() {
     function loginHandle(e) {
         if (user.length<3 || password.length<3) {
             alert("type corrent value")
+        } else {
+            alert("all good")
         }
         e.preventDefault()
     }
@@ -40,7 +42,7 @@ function Login() {
                 <input type="text" placeholder='Enter User Id' onChange={userHandler} />
                 {userErr?<span style={{color: "red"}}>User Not Valid</span>:""}
                 <br /><br />
-                <input type="text" placeholder='Enter Password' onChange={passwordHandler} />
+                <input type="password" placeholder='Enter Password' onChange={passwordHandler} />
                 {pass   ?<span style={{color: "red"}}>Password not valid</span>:""}
                 <br /><br />
                 <button type='submit'>Login</button>
