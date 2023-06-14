@@ -1,19 +1,22 @@
 
-import Users from './Users';
 import './App.css';
 import { useState } from 'react';
+import Users from './Users';
 import Profile from './Profile';
 import Login from './Login';
+import Members from './Members';
 
 
 function App() {
-  const [data, setData] = useState(null)
-  const [print, setPrint] = useState(false)
+  // const [data, setData] = useState(null)
+  // const [print, setPrint] = useState(false)
 
-  function getData(val) {
-    console.warn(val.target.value);
-    setData(val.target.value)
-    setPrint(false)
+  // function getData(val) {
+  function getData() {
+    console.log("Added");
+    // console.warn(val.target.value);
+    // setData(val.target.value)
+    // setPrint(false)
   }
   // function increment() {
   //   setData(data+1)  
@@ -25,21 +28,24 @@ function App() {
   // const [name, setName] = useState("Rutvik");
 
 
-  const [name, setName] = useState("");
-  const [tnc, setTnc] = useState(false);
-  const [interest, setinterest] = useState("");
-  function getFormData(e) {
-    e.preventDefault()
-    console.log(name, interest, tnc);
-  }
+  // const [name, setName] = useState("");
+  // const [tnc, setTnc] = useState(false);
+  // const [interest, setinterest] = useState("");
+  // function getFormData(e) {
+  //   e.preventDefault()
+  //   console.log(name, interest, tnc);
+  // }
 
   return (
     <div className="App">
-      {
+      {/* <Users data={getData} /> */}
+      {/* <Members data={getData} /> */}
+      <Members />
+      {/* {
         print ?
           <h1>{data}</h1>
           : null
-      }
+      } */}
       {/* <button onClick={increment}>Click Me</button> */}
       {/* <button onClick={decrement}>Click Me</button> */}
       {/* <Users
@@ -48,8 +54,8 @@ function App() {
       email={"meet@gmail.com"}
       other={{address: 'khedbrahma', mobile: "5674964658"}}
       /> */}
-      <Profile />
-      <Login />
+      {/* <Profile /> */}
+      {/* <Login /> */}
       {/* <button onClick={()=>{setName("meet")}}>Update Name</button> */}
 
       {/* <input type="text" onChange={getData} /> */}

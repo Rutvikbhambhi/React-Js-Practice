@@ -5,6 +5,7 @@ function Login() {
     const [password, setPassword] = useState("");
     const [userErr, setUserErr] = useState(false);
     const [pass, setPass] = useState("");
+    
     function loginHandle(e) {
         if (user.length<3 || password.length<3) {
             alert("type corrent value")
@@ -12,6 +13,7 @@ function Login() {
             alert("all good")
         }
         e.preventDefault()
+        console.log("Data SuccessFully");
     }
 
     function userHandler(e) {
@@ -43,7 +45,7 @@ function Login() {
                 {userErr?<span style={{color: "red"}}>User Not Valid</span>:""}
                 <br /><br />
                 <input type="password" placeholder='Enter Password' onChange={passwordHandler} />
-                {pass   ?<span style={{color: "red"}}>Password not valid</span>:""}
+                {pass?<span style={{color: "red"}}>Password not valid</span>:""}
                 <br /><br />
                 <button type='submit'>Login</button>
             </form>
