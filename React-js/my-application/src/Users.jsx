@@ -8,7 +8,7 @@ function Users(props) {
     return (
         <div>
             <h1>Rutvik</h1>
-            <button onClick={() => props.data}>Call data function</button>  
+            < button onClick={() => props.data}>Call data function</button>  
             {/* {
                 status ? <h1>Rutvik</h1> : null
             } */}

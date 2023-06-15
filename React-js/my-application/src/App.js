@@ -1,23 +1,52 @@
 
 import './App.css';
-import { useState } from 'react';
-import Users from './Users';
-import Profile from './Profile';
-import Login from './Login';
+// import { useState } from 'react';
+// import Users from './Users';
+// import Profile from './Profile';
+// import Login from './Login';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import Members from './Members';
+import { Button } from 'react-bootstrap';
+import Table from 'react-bootstrap/Table';
 
 
 function App() {
+  // const student = ['Rutvik', 'Rahul', 'Aditya', 'Meet'];
+  const users = [
+    { name: "Rutvik", email: "rutvik@gmail.com", address: [
+      {Hn:"10",city:"Noida"}
+    ] },
+    { name: "Meet", email: "meet@gmail.com", contact: "999584648" },
+    { name: "Rahul", email: "rahul@gmail.com", contact: "9995846748" },
+    { name: "Aditya", email: "aditya@gmail.com", contact: "9995846748" }
+  ]
+
+  // const student = [
+  //   { name: "Rutvik", email: "rutvik@gmail.com", contact: "9694946448" },
+  //   { name: "Rahul", email: "rahul@gmail.com", contact: "989452448" },
+  //   { name: "Aditya", email: "aditya@gmail.com", contact: "9995846748" }
+  // ]
+
+  // // map looping
+  // student.map((item) => {
+  //   console.log("My Name is:", item);
+  // });
+
+  // for (let i = 0; i < student.length; i++) {
+  //   console.warn("In for loop My Name is:", student[i]) 
+  // }
+
+
   // const [data, setData] = useState(null)
   // const [print, setPrint] = useState(false)
 
   // function getData(val) {
-  function getData() {
-    console.log("Added");
-    // console.warn(val.target.value);
-    // setData(val.target.value)
-    // setPrint(false)
-  }
+  // function getData() {
+  // console.log("Added");
+  // console.warn(val.target.value);
+  // setData(val.target.value)
+  // setPrint(false)
+  // }
   // function increment() {
   //   setData(data+1)  
   // }
@@ -38,9 +67,49 @@ function App() {
 
   return (
     <div className="App">
+      <h2>Handle Array with List</h2>
+      <Table striped variant='dark'>
+        <tbody>
+          <tr>
+            <td>Name</td>
+            <td>Email</td>
+            <td>Contact</td>
+          </tr>
+          
+          {
+            users.map((item, i) =>
+              item.contact === '9995846748' ?
+              <tr key={i}>
+                <td>{item.name}</td>
+                <td>{item.email}</td>
+                <td>{item.contact}</td>
+              </tr>:null
+            )
+          }
+        </tbody>
+      </Table>
+
+
+      {/* <table border={1} align='center'>
+        <tr>
+          <td>Name</td>
+          <td>Email</td>
+          <td>Contact</td>
+        </tr>
+        {
+          student.map((data) =>
+            <tr>
+              <td>{data.name}</td>
+              <td>{data.email}</td>
+              <td>{data.contact}</td>
+            </tr>
+          )
+        }
+      </table> */}
+      {/* <Button className='btn btn-warning'>Primary</Button>{' '} */}
       {/* <Users data={getData} /> */}
       {/* <Members data={getData} /> */}
-      <Members />
+      {/* <Members /> */}
       {/* {
         print ?
           <h1>{data}</h1>
