@@ -13,12 +13,38 @@ import Table from 'react-bootstrap/Table';
 function App() {
   // const student = ['Rutvik', 'Rahul', 'Aditya', 'Meet'];
   const users = [
-    { name: "Rutvik", email: "rutvik@gmail.com", address: [
-      {Hn:"10",city:"Noida"}
-    ] },
-    { name: "Meet", email: "meet@gmail.com", contact: "999584648" },
-    { name: "Rahul", email: "rahul@gmail.com", contact: "9995846748" },
-    { name: "Aditya", email: "aditya@gmail.com", contact: "9995846748" }
+    {
+      name: "Rutvik", email: "rutvik@gmail.com", address: [
+        { Hn: "10", city: "Noida", country: "India" },
+        { Hn: "30", city: "Gurgaon", country: "India" },
+        { Hn: "43", city: "Delhi", country: "India" },
+        { Hn: "90", city: "Noida", country: "India" }
+      ]
+    },
+    {
+      name: "Meet", email: "meet@gmail.com", address: [
+        { Hn: "10", city: "Noida", country: "India" },
+        { Hn: "30", city: "Gurgaon", country: "India" },
+        { Hn: "43", city: "Delhi", country: "India" },
+        { Hn: "90", city: "Noida", country: "India" }
+      ]
+    },
+    {
+      name: "Rahul", email: "rahul@gmail.com", address: [
+        { Hn: "10", city: "Noida", country: "India" },
+        { Hn: "30", city: "Gurgaon", country: "India" },
+        { Hn: "43", city: "Delhi", country: "India" },
+        { Hn: "90", city: "Noida", country: "India" }
+      ]
+    },
+    {
+      name: "Aditya", email: "aditya@gmail.com", address: [
+        { Hn: "10", city: "Noida", country: "India" },
+        { Hn: "30", city: "Gurgaon", country: "India" },
+        { Hn: "43", city: "Delhi", country: "India" },
+        { Hn: "90", city: "Noida", country: "India" }
+      ]
+    }
   ]
 
   // const student = [
@@ -68,22 +94,22 @@ function App() {
   return (
     <div className="App">
       <h2>Handle Array with List</h2>
-      <Table striped variant='dark'>
+      <Table striped variant='dark' height='300px'>
         <tbody>
           <tr>
             <td>Name</td>
             <td>Email</td>
             <td>Contact</td>
           </tr>
-          
+
           {
             users.map((item, i) =>
               item.contact === '9995846748' ?
-              <tr key={i}>
-                <td>{item.name}</td>
-                <td>{item.email}</td>
-                <td>{item.contact}</td>
-              </tr>:null
+                <tr key={i}>
+                  <td>{item.name}</td>
+                  <td>{item.email}</td>
+                  <td>{item.contact}</td>
+                </tr> : null
             )
           }
         </tbody>
