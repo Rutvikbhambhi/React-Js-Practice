@@ -1,50 +1,62 @@
 
 import './App.css';
 // import { useState } from 'react';
-// import Users from './Users';
 // import Profile from './Profile';
 // import Login from './Login';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Members from './Members';
 import { Button } from 'react-bootstrap';
 import Table from 'react-bootstrap/Table';
+import Users from './Users';
 
 
 function App() {
   // const student = ['Rutvik', 'Rahul', 'Aditya', 'Meet'];
   const users = [
     {
-      name: "Rutvik", email: "rutvik@gmail.com", address: [
-        { Hn: "10", city: "Noida", country: "India" },
-        { Hn: "30", city: "Gurgaon", country: "India" },
-        { Hn: "43", city: "Delhi", country: "India" },
-        { Hn: "90", city: "Noida", country: "India" }
-      ]
+      name: 'Rutvik', email: 'rutvik@gmail.com', contact: '6654636554'
     },
     {
-      name: "Meet", email: "meet@gmail.com", address: [
-        { Hn: "10", city: "Noida", country: "India" },
-        { Hn: "30", city: "Gurgaon", country: "India" },
-        { Hn: "43", city: "Delhi", country: "India" },
-        { Hn: "90", city: "Noida", country: "India" }
-      ]
+      name: 'Rahul', email: 'rahul@gmail.com', contact: '6654636554'
     },
     {
-      name: "Rahul", email: "rahul@gmail.com", address: [
-        { Hn: "10", city: "Noida", country: "India" },
-        { Hn: "30", city: "Gurgaon", country: "India" },
-        { Hn: "43", city: "Delhi", country: "India" },
-        { Hn: "90", city: "Noida", country: "India" }
-      ]
+      name: 'Aditya', email: 'aditya@gmail.com', contact: '6654636554'
     },
     {
-      name: "Aditya", email: "aditya@gmail.com", address: [
-        { Hn: "10", city: "Noida", country: "India" },
-        { Hn: "30", city: "Gurgaon", country: "India" },
-        { Hn: "43", city: "Delhi", country: "India" },
-        { Hn: "90", city: "Noida", country: "India" }
-      ]
+      name: 'Vijay', email: 'vijay@gmail.com', contact: '6654636554'
     }
+    // {
+    //   name: "Rutvik", email: "rutvik@gmail.com", address: [
+    //     { Hn: "10", city: "Noida", country: "India" },
+    //     { Hn: "30", city: "Gurgaon", country: "India" },
+    //     { Hn: "43", city: "Delhi", country: "India" },
+    //     { Hn: "90", city: "Noida", country: "India" }
+    //   ]
+    // },
+    // {
+    //   name: "Meet", email: "meet@gmail.com", address: [
+    //     { Hn: "10", city: "Noida", country: "India" },
+    //     { Hn: "30", city: "Gurgaon", country: "India" },
+    //     { Hn: "43", city: "Delhi", country: "India" },
+    //     { Hn: "90", city: "Noida", country: "India" }
+    //   ]
+    // },
+    // {
+    //   name: "Rahul", email: "rahul@gmail.com", address: [
+    //     { Hn: "10", city: "Noida", country: "India" },
+    //     { Hn: "30", city: "Gurgaon", country: "India" },
+    //     { Hn: "43", city: "Delhi", country: "India" },
+    //     { Hn: "90", city: "Noida", country: "India" }
+    //   ]
+    // },
+    // {
+    //   name: "Aditya", email: "aditya@gmail.com", address: [
+    //     { Hn: "10", city: "Noida", country: "India" },
+    //     { Hn: "30", city: "Gurgaon", country: "India" },
+    //     { Hn: "43", city: "Delhi", country: "India" },
+    //     { Hn: "90", city: "Noida", country: "India" }
+    //   ]
+    // },
   ]
 
   // const student = [
@@ -93,27 +105,49 @@ function App() {
 
   return (
     <div className="App">
-      <h2>Handle Array with List</h2>
-      <Table striped variant='dark' height='300px'>
+      <h1>Reuse Component With List</h1>
+      {
+        users.map((item, i) =>
+          <Users data={item} />
+        )
+      }
+      {/* <h2>Handle Array with List</h2>
+      <Table variant='dark' striped>
         <tbody>
           <tr>
+            <td>S.N</td>
             <td>Name</td>
             <td>Email</td>
-            <td>Contact</td>
+            <td>Address</td>
           </tr>
-
-          {
-            users.map((item, i) =>
-              item.contact === '9995846748' ?
-                <tr key={i}>
-                  <td>{item.name}</td>
-                  <td>{item.email}</td>
-                  <td>{item.contact}</td>
-                </tr> : null
-            )
-          }
         </tbody>
-      </Table>
+
+        {
+          users.map((item, i) =>
+            // item.contact === '9995846748' ?
+            <tr key={i} style={{backgroundColor:'black'}}>
+              <td>{i+1}</td>
+              <td>{item.name}</td>
+              <td>{item.email}</td>
+              <td>
+                <Table variant='dark' striped>
+                  <tbody>
+                    {
+                      item.address.map((data) =>
+                        <tr>
+                          <td>{data.Hn}</td>
+                          <td>{data.city}</td>
+                          <td>{data.country}</td>
+                        </tr>
+                      )
+                    }
+                  </tbody>
+                </Table>
+              </td>
+            </tr>
+          )
+        }
+      </Table> */}
 
 
       {/* <table border={1} align='center'>
