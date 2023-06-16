@@ -4,27 +4,40 @@ import './App.css';
 // import Profile from './Profile';
 // import Login from './Login';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Members from './Members';
+import Members from './Components/Members';
 import { Button } from 'react-bootstrap';
 import Table from 'react-bootstrap/Table';
-import Users from './Users';
+import Users from './Components/Users';
+import Pure from './Components/Pure';
 
 
 function App() {
+  // Lifting State Up
+  // let data="Rutvik";
+  function parentAlert(data){
+    alert(data.name)
+    console.log(data);
+  }
+
+
+  
   // const student = ['Rutvik', 'Rahul', 'Aditya', 'Meet'];
-  const users = [
-    {
-      name: 'Rutvik', email: 'rutvik@gmail.com', contact: '6654636554'
-    },
-    {
-      name: 'Rahul', email: 'rahul@gmail.com', contact: '6654636554'
-    },
-    {
-      name: 'Aditya', email: 'aditya@gmail.com', contact: '6654636554'
-    },
-    {
-      name: 'Vijay', email: 'vijay@gmail.com', contact: '6654636554'
-    }
+  // const users = [
+
+  // Reuse Component With List
+
+  //   {
+  //     name: 'Rutvik', email: 'rutvik@gmail.com', contact: '6654636554'
+  //   },
+  //   {
+  //     name: 'Rahul', email: 'rahul@gmail.com', contact: '6654636554'
+  //   },
+  //   {
+  //     name: 'Aditya', email: 'aditya@gmail.com', contact: '6654636554'
+  //   },
+  //   {
+  //     name: 'Vijay', email: 'vijay@gmail.com', contact: '6654636554'
+  //   }
     // {
     //   name: "Rutvik", email: "rutvik@gmail.com", address: [
     //     { Hn: "10", city: "Noida", country: "India" },
@@ -57,7 +70,7 @@ function App() {
     //     { Hn: "90", city: "Noida", country: "India" }
     //   ]
     // },
-  ]
+  // ]
 
   // const student = [
   //   { name: "Rutvik", email: "rutvik@gmail.com", contact: "9694946448" },
@@ -105,12 +118,17 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Reuse Component With List</h1>
-      {
+      {/* <h1>Lifting State Up</h1>
+      <Users alert={parentAlert} /> */}
+
+      <Pure />
+
+      {/* <h1>Reuse Component With List</h1> */}
+      {/* {
         users.map((item, i) =>
           <Users data={item} />
         )
-      }
+      } */}
       {/* <h2>Handle Array with List</h2>
       <Table variant='dark' striped>
         <tbody>

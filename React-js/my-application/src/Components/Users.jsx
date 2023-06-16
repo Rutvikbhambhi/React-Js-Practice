@@ -1,15 +1,26 @@
 import React from 'react'
 
 function Users(props) {
+    // Lifting State Up
+    const data={name:"Rutvik", email: 'rutvik@gmail.com'};
+
+
     // const [status, setStatus] = React.useState(false)    
     // function getData(val) {
     //     console.log(val);
     // }
     return (
         <div>
+            {/* Lifting State Up */}
+            <h2>User Name : {props.name}</h2>
+            <button onClick={()=>props.alert(data)}>Click Me</button>
+
+            {/* Reuse Component With List
             <span>{props.data.name}</span>
             <span>{props.data.email}</span>
-            <span>{props.data.address}</span>
+            <span>{props.data.address}</span> */}
+
+
             {/* < button onClick={() => props.data}>Call data function</button>   */}
             {/* {
                 status ? <h1>Rutvik</h1> : null
