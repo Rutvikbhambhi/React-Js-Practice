@@ -1,14 +1,15 @@
 
 import './App.css';
 // import { useState } from 'react';
-// import Profile from './Profile';
 // import Login from './Login';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Members from './Components/Members';
 import { Button } from 'react-bootstrap';
 import Table from 'react-bootstrap/Table';
 import Users from './Components/Users';
-import Pure from './Components/Pure';
+import Pure from './Components/Hooks/Pure';
+import State from './Components/Hooks/State';
+import Ref from './Components/Hooks/Ref';
 
 
 function App() {
@@ -121,7 +122,11 @@ function App() {
       {/* <h1>Lifting State Up</h1>
       <Users alert={parentAlert} /> */}
 
-      <Pure />
+      {/* <Pure /> */}
+      {/* <Ref /> */}
+
+      <State />
+      {/* <Login /> */}
 
       {/* <h1>Reuse Component With List</h1> */}
       {/* {
@@ -201,8 +206,7 @@ function App() {
       email={"meet@gmail.com"}
       other={{address: 'khedbrahma', mobile: "5674964658"}}
       /> */}
-      {/* <Profile /> */}
-      {/* <Login /> */}
+
       {/* <button onClick={()=>{setName("meet")}}>Update Name</button> */}
 
       {/* <input type="text" onChange={getData} /> */}
