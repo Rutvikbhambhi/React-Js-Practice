@@ -3,13 +3,14 @@ import './App.css';
 // import { useState } from 'react';
 // import Login from './Login';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Members from './Components/Members';
+import Effect from './Components/Hooks/Effect';
 import { Button } from 'react-bootstrap';
 import Table from 'react-bootstrap/Table';
 import Users from './Components/Users';
 import Pure from './Components/Hooks/Pure';
 import State from './Components/Hooks/State';
 import Ref from './Components/Hooks/Ref';
+import Context from './Components/Hooks/Context';
 
 
 function App() {
@@ -125,7 +126,9 @@ function App() {
       {/* <Pure /> */}
       {/* <Ref /> */}
 
-      <State />
+      {/* <State /> */}
+      {/* <Effect /> */}
+      <Context />
       {/* <Login /> */}
 
       {/* <h1>Reuse Component With List</h1> */}
@@ -192,7 +195,6 @@ function App() {
       {/* <Button className='btn btn-warning'>Primary</Button>{' '} */}
       {/* <Users data={getData} /> */}
       {/* <Members data={getData} /> */}
-      {/* <Members /> */}
       {/* {
         print ?
           <h1>{data}</h1>
