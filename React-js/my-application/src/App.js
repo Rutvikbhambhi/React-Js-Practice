@@ -11,6 +11,8 @@ import Pure from './Components/Hooks/Pure';
 import State from './Components/Hooks/State';
 import Ref from './Components/Hooks/Ref';
 import Context from './Components/Hooks/Context';
+import Reducer from './Components/Hooks/Reducer';
+import Memo from './Components/Hooks/Memo';
 
 
 function App() {
@@ -126,9 +128,13 @@ function App() {
       {/* <Pure /> */}
       {/* <Ref /> */}
 
+      {/* Hooks */}
+      
       {/* <State /> */}
       {/* <Effect /> */}
-      <Context />
+      {/* <Context /> */}
+      {/* <Reducer /> */}
+      <Memo />
       {/* <Login /> */}
 
       {/* <h1>Reuse Component With List</h1> */}
