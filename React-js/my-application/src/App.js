@@ -13,6 +13,9 @@ import Ref from './Components/Hooks/Ref';
 import Context from './Components/Hooks/Context';
 import Reducer from './Components/Hooks/Reducer';
 import Memo from './Components/Hooks/Memo';
+import Create from './Components/CrudOperation/Create';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Read from './Components/CrudOperation/Read';
 
 
 function App() {
@@ -122,6 +125,17 @@ function App() {
 
   return (
     <div className="App">
+
+    {/* CrudOperation */}
+    <BrowserRouter>
+      <Routes>
+        <Route exact path='/' element={<Create />} />
+        <Route exact path='/read' element={<Read />} />
+      </Routes>
+    </BrowserRouter>
+
+
+
       {/* <h1>Lifting State Up</h1>
       <Users alert={parentAlert} /> */}
 
@@ -134,7 +148,7 @@ function App() {
       {/* <Effect /> */}
       {/* <Context /> */}
       {/* <Reducer /> */}
-      <Memo />
+      {/* <Memo /> */}
       {/* <Login /> */}
 
       {/* <h1>Reuse Component With List</h1> */}

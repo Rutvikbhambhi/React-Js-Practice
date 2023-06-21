@@ -16,9 +16,9 @@ function Memo() {
     }
     return (
         <div>
-            <button onClick={increment}>Count One 0 {countone}</button>
+            <button onClick={increment}>Count One{countone}</button>
                 {isEven()?'Even':'Odd'}<br />
-            <button onClick={decrement}>Count Two 0 {counttwo}</button>
+            <button onClick={decrement}>Count Two{counttwo}</button>
         </div>
     )
 }
