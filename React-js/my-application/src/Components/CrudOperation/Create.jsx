@@ -26,7 +26,7 @@ function Create() {
     return (
         <div>
             <h2>Create</h2>
-            <form>
+            <form className='text-dark'>
                 <div className="mb-3 w-50 m-auto">
                     <label className="form-label">Name</label>
                     <input
