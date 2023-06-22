@@ -16,6 +16,7 @@ import Memo from './Components/Hooks/Memo';
 import Create from './Components/CrudOperation/Create';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Read from './Components/CrudOperation/Read';
+import Update from './Components/CrudOperation/Update';
 
 
 function App() {
@@ -131,6 +132,7 @@ function App() {
       <Routes>
         <Route exact path='/' element={<Create />} />
         <Route exact path='/read' element={<Read />} />
+        <Route exact path='/update' element={<Update />} />
       </Routes>
     </BrowserRouter>
 
