@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 function Create() {
 
@@ -28,8 +28,12 @@ function Create() {
 
     return (
         <div className='text-dark mt-5'>
-            <h2>Create</h2>
-            <button className='btn btn-primary'>Show Data</button>
+            <div className="d-flex justify-content-evenly">
+                <h2>Create</h2>
+                <Link to='/read'>
+                    <button className='btn btn-primary'>Show Data</button>
+                </Link>
+            </div>
             <form>
                 <div className="mb-3 w-50 m-auto">
                     <label className="form-label">Name</label>
@@ -53,11 +57,11 @@ function Create() {
                 {name}
                 {email}
 
-                <button 
-                    type="submit" 
-                    className="btn btn-primary" 
+                <button
+                    type="submit"
+                    className="btn btn-primary"
                     onClick={handleSubmit}>
-                        Submit
+                    Submit
                 </button>
             </form>
         </div>
