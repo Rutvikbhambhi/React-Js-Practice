@@ -42,6 +42,7 @@ function Read() {
                         type='checkbox'
                         onClick={() => {
                             if (tabledark === 'table-dark') setTableDark("")
+                            // else setTableDark("table-dark");
                             else setTableDark("table-dark");
                         }}
                     />
