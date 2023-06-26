@@ -3,32 +3,34 @@ import './App.css';
 // import { useState } from 'react';
 // import Login from './Login';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Effect from './Components/Hooks/Effect';
-import { Button } from 'react-bootstrap';
-import Table from 'react-bootstrap/Table';
-import Users from './Components/Users';
-import Pure from './Components/Hooks/Pure';
-import State from './Components/Hooks/State';
-import Ref from './Components/Hooks/Ref';
-import Context from './Components/Hooks/Context';
-import Reducer from './Components/Hooks/Reducer';
-import Memo from './Components/Hooks/Memo';
-import Create from './Components/CrudOperation/Create';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Read from './Components/CrudOperation/Read';
-import Update from './Components/CrudOperation/Update';
+// import Effect from './Components/Hooks/Effect';
+// import { Button } from 'react-bootstrap';
+// import Table from 'react-bootstrap/Table';
+// import Users from './Components/Users';
+// import Pure from './Components/Hooks/Pure';
+// import State from './Components/Hooks/State';
+// import Ref from './Components/Hooks/Ref';
+// import Context from './Components/Hooks/Context';
+// import Reducer from './Components/Hooks/Reducer';
+// import Memo from './Components/Hooks/Memo';
+// import Create from './Components/CrudOperation/Create';
+// import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import NoteContainer from './Components/NoteContainer/NoteContainer';
+import Sidebar from './Components/Sidebar/Sidebar';
+// import Read from './Components/CrudOperation/Read';
+// import Update from './Components/CrudOperation/Update';
 
 
 function App() {
   // Lifting State Up
   // let data="Rutvik";
-  function parentAlert(data){
-    alert(data.name)
-    console.log(data);
-  }
+  // function parentAlert(data){
+  //   alert(data.name)
+  //   console.log(data);
+  // }
 
 
-  
+
   // const student = ['Rutvik', 'Rahul', 'Aditya', 'Meet'];
   // const users = [
 
@@ -46,38 +48,38 @@ function App() {
   //   {
   //     name: 'Vijay', email: 'vijay@gmail.com', contact: '6654636554'
   //   }
-    // {
-    //   name: "Rutvik", email: "rutvik@gmail.com", address: [
-    //     { Hn: "10", city: "Noida", country: "India" },
-    //     { Hn: "30", city: "Gurgaon", country: "India" },
-    //     { Hn: "43", city: "Delhi", country: "India" },
-    //     { Hn: "90", city: "Noida", country: "India" }
-    //   ]
-    // },
-    // {
-    //   name: "Meet", email: "meet@gmail.com", address: [
-    //     { Hn: "10", city: "Noida", country: "India" },
-    //     { Hn: "30", city: "Gurgaon", country: "India" },
-    //     { Hn: "43", city: "Delhi", country: "India" },
-    //     { Hn: "90", city: "Noida", country: "India" }
-    //   ]
-    // },
-    // {
-    //   name: "Rahul", email: "rahul@gmail.com", address: [
-    //     { Hn: "10", city: "Noida", country: "India" },
-    //     { Hn: "30", city: "Gurgaon", country: "India" },
-    //     { Hn: "43", city: "Delhi", country: "India" },
-    //     { Hn: "90", city: "Noida", country: "India" }
-    //   ]
-    // },
-    // {
-    //   name: "Aditya", email: "aditya@gmail.com", address: [
-    //     { Hn: "10", city: "Noida", country: "India" },
-    //     { Hn: "30", city: "Gurgaon", country: "India" },
-    //     { Hn: "43", city: "Delhi", country: "India" },
-    //     { Hn: "90", city: "Noida", country: "India" }
-    //   ]
-    // },
+  // {
+  //   name: "Rutvik", email: "rutvik@gmail.com", address: [
+  //     { Hn: "10", city: "Noida", country: "India" },
+  //     { Hn: "30", city: "Gurgaon", country: "India" },
+  //     { Hn: "43", city: "Delhi", country: "India" },
+  //     { Hn: "90", city: "Noida", country: "India" }
+  //   ]
+  // },
+  // {
+  //   name: "Meet", email: "meet@gmail.com", address: [
+  //     { Hn: "10", city: "Noida", country: "India" },
+  //     { Hn: "30", city: "Gurgaon", country: "India" },
+  //     { Hn: "43", city: "Delhi", country: "India" },
+  //     { Hn: "90", city: "Noida", country: "India" }
+  //   ]
+  // },
+  // {
+  //   name: "Rahul", email: "rahul@gmail.com", address: [
+  //     { Hn: "10", city: "Noida", country: "India" },
+  //     { Hn: "30", city: "Gurgaon", country: "India" },
+  //     { Hn: "43", city: "Delhi", country: "India" },
+  //     { Hn: "90", city: "Noida", country: "India" }
+  //   ]
+  // },
+  // {
+  //   name: "Aditya", email: "aditya@gmail.com", address: [
+  //     { Hn: "10", city: "Noida", country: "India" },
+  //     { Hn: "30", city: "Gurgaon", country: "India" },
+  //     { Hn: "43", city: "Delhi", country: "India" },
+  //     { Hn: "90", city: "Noida", country: "India" }
+  //   ]
+  // },
   // ]
 
   // const student = [
@@ -126,15 +128,18 @@ function App() {
 
   return (
     <div className="App">
+      <Sidebar />
+      <NoteContainer />
 
-    {/* CrudOperation */}
-    <BrowserRouter>
-      <Routes>
-        <Route exact path='/' element={<Create />} />
-        <Route exact path='/read' element={<Read />} />
-        <Route exact path='/update' element={<Update />} />
-      </Routes>
-    </BrowserRouter>
+
+      {/* CrudOperation */}
+      {/* <BrowserRouter>
+        <Routes>
+          <Route exact path='/' element={<Create />} />
+          <Route exact path='/read' element={<Read />} />
+          <Route exact path='/update' element={<Update />} />
+        </Routes>
+      </BrowserRouter> */}
 
 
 
@@ -145,7 +150,7 @@ function App() {
       {/* <Ref /> */}
 
       {/* Hooks */}
-      
+
       {/* <State /> */}
       {/* <Effect /> */}
       {/* <Context /> */}
