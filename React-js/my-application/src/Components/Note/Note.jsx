@@ -45,8 +45,8 @@ function Note(props) {
     timeout = setTimeout(func, timer);
   }
 
-  const updateText = (text) => {
-    debounce(() => props.updateText(text))
+  const updateText = (text, id) => {
+    debounce(() => props.updateText(text, id))
   }
 
   return (
@@ -54,7 +54,7 @@ function Note(props) {
       <textarea
         className='note_text'
         defaultValue={props.note.text}
-        onChange={(event) => updateText(event.target.value)}
+        onChange={(event) => updateText(event.target.value, props.note.id)}
       />
 
       <div className="note_footer">

@@ -155,6 +155,16 @@ function App() {
     setNotes(tempNotes);
   };
 
+  const updateText = (text, id) => {
+    const tempNotes = [...notes];
+
+    const index = tempNotes.findIndex((item) => item.id === id);
+    if (index < 0) return;
+
+    tempNotes[index].text = text;
+    setNotes(tempNotes);
+  }
+
   useEffect(() => {
     localStorage.setItem('notes-app', JSON.stringify(notes))
   })
@@ -162,7 +172,12 @@ function App() {
   return (
     <div className="App">
       <Sidebar addNote={addNote} />
-      <NoteContainer notes={notes} deleteNote={deleteNote} />
+      <NoteContainer
+        notes={notes}
+        deleteNote={deleteNote}
+        updateText={updateText}
+      />
+
 
 
       {/* CrudOperation */}
