@@ -17,6 +17,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 // import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import NoteContainer from './Components/NoteContainer/NoteContainer';
 import Sidebar from './Components/Sidebar/Sidebar';
+import { useEffect, useState } from 'react';
 // import Read from './Components/CrudOperation/Read';
 // import Update from './Components/CrudOperation/Update';
 
@@ -126,10 +127,42 @@ function App() {
   //   console.log(name, interest, tnc);
   // }
 
+
+  const [notes, setNotes] = useState(
+    JSON.parse(localStorage.getItem('notes-app')) || []
+  );
+
+  const addNote = (color) => {
+    const tempNotes = [...notes];
+
+    tempNotes.push({
+      id: Date.now() + "" + Math.floor(Math.random() * 78),
+      text: "",
+      time: Date.now(),
+      color,
+    });
+    setNotes(tempNotes);
+  };
+
+  const deleteNote = (id) => {
+    const tempNotes = [...notes]
+
+    const index = tempNotes.findIndex((item) => item.id === id)
+    if (index < 0) return
+    console.log(id, index, tempNotes);
+
+    tempNotes.splice(index, 1);
+    setNotes(tempNotes);
+  };
+
+  useEffect(() => {
+    localStorage.setItem('notes-app', JSON.stringify(notes))
+  })
+
   return (
     <div className="App">
-      <Sidebar />
-      <NoteContainer />
+      <Sidebar addNote={addNote} />
+      <NoteContainer notes={notes} deleteNote={deleteNote} />
 
 
       {/* CrudOperation */}
