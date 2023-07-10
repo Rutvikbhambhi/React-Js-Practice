@@ -1,5 +1,4 @@
-import React from "react";
-
+// import React from "react";
 import { useEffect } from "react";
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
@@ -17,8 +16,6 @@ import SearchResult from "./Pages/searchResult/SearchResult";
 import Explore from "./Pages/explore/Explore";
 import PageNotFound from "./Pages/404/PageNotFound";
 
-
-
 getApiConfiguration
 
 function App() {
@@ -27,15 +24,21 @@ function App() {
   console.log(url);
 
   useEffect(() => {
-    apiTesting();
+    fetchApiConfig();
   }, []);
 
-  const apiTesting = () => {
-    fetchDataFromApi("/movie/popular")
-      .then((res) => {
-        console.log(res);
-        dispatch(getApiConfiguration(res))
-      });
+  const fetchApiConfig = () => {
+    fetchDataFromApi("/configuration").then((res) => {
+      console.log(res);
+
+      const url = {
+        backdrop: res.images.secure_base_url + "original",
+        poster: res.images.secure_base_url + "original",
+        profile: res.images.secure_base_url + "original",
+      }
+
+      dispatch(getApiConfiguration(url));
+    });
   };
 
   return (
@@ -49,8 +52,8 @@ function App() {
           <Route path="/explore/:mediaType" element={<Explore />} />
           <Route path="*" element={<PageNotFound />} />
         </Routes>
+        <Footer />
       </BrowserRouter>
-      <Footer />
       {url?.total_pages}
     </div>
   )
