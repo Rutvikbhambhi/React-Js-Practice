@@ -1,8 +1,6 @@
 import React from 'react'
 import "./home.scss"
-import HeroBanner from './HeroBanner/HeroBanner'
-
-HeroBanner
+import HeroBanner from './HeroBanner/HeroBanner';
 
 const Home = () => {
   return (

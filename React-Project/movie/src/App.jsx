@@ -16,19 +16,20 @@ import SearchResult from "./Pages/searchResult/SearchResult";
 import Explore from "./Pages/explore/Explore";
 import PageNotFound from "./Pages/404/PageNotFound";
 
-getApiConfiguration
-
 function App() {
   const dispatch = useDispatch();
-  const { url } = useSelector((state) => state.home);
+  const { url }  = useSelector((state) => state.home);
   console.log(url);
 
   useEffect(() => {
     fetchApiConfig();
+    // apiTesting();
   }, []);
 
   const fetchApiConfig = () => {
+  // const apiTesting = () => {
     fetchDataFromApi("/configuration").then((res) => {
+    // fetchDataFromApi("/movie/popular").then((res) => {
       console.log(res);
 
       const url = {
