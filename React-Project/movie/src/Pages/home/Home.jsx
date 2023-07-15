@@ -1,4 +1,4 @@
-import React from 'react'
+// import React from 'react'
 import "./home.scss"
 import HeroBanner from './HeroBanner/HeroBanner';
 

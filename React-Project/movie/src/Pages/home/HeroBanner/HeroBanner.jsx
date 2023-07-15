@@ -4,7 +4,8 @@ import useFetch from '../../../hooks/useFetch';
 import { useSelector } from 'react-redux';
 import "./heroBanner.scss";
 
-import Img from '../../../components/lazyLoadImage/img';     
+import Img from '../../../components/lazyLoadImage/img';
+// import Img from '../../../assets/movix-logo.svg';     
 import ContentWrapper from '../../../components/contentWrapper/ContentWrapper';
 
 const HeroBanner = () => {
@@ -25,7 +26,7 @@ const HeroBanner = () => {
     if (event.key === "Enter" && query.length > 0) {
       navigate(`/search/${query}`);
     }
-  }; 
+  };
 
   return (
     <div className='heroBanner'>
@@ -33,7 +34,7 @@ const HeroBanner = () => {
         <Img src={background} />
       </div>}
 
-      <div className="opacity-layer"></div>   
+      <div className="opacity-layer"></div>
       <ContentWrapper>
         <div className="heroBannerContent">
           <span className='title'>WellCome.</span>
