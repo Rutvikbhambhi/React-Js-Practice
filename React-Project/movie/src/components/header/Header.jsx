@@ -1,5 +1,5 @@
 // import React from 'react'
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { FaSearch } from "react-icons/fa";
 import { SlMenu } from "react-icons/sl";
 import { VscChromeClose } from "react-icons/vsc";
@@ -19,15 +19,57 @@ const Header = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
+  
+  const controlNavbar = () => {
+    console.log(window.scrollY);
+    if (window.scrollY > 200) {
+      if (window.scrollY > lastScrollY && !mobileMenu) {
+        setShow("hide");
+      } else {
+        setShow("show");
+      }
+    } else {
+      setShow("top");
+    }
+    setLastScrollY(window.scrollY);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", controlNavbar);
+    return () => {
+      window.removeEventListener("scroll", controlNavbar);
+    };
+  }, [lastScrollY]);
+
+  const searchQueryHandler = (event) => {
+    if (event.key === "Enter" && query.length > 0) {
+      navigate(`/search/${query}`);
+      setTimeout(() => {
+        setShowSearch(false);
+      }, 1000);
+    }
+  };
+
   const openSearch = () => {
-    setMobileMenu(false)
-    setShowSearch(true)
-  }
+    setMobileMenu(false);
+    setShowSearch(true);
+  };
 
   const openMobileMenu = () => {
-    setMobileMenu(true)
-    setShowSearch(false)
-  }
+    setMobileMenu(true);
+    setShowSearch(false);
+  };
+
+  const navigationHandler = (type) => {
+    if (type === "movie") {
+      navigate("/explore/movie");
+    } else {
+      navigate("/explore/tv");
+    }
+  };
 
   return (
     <header className={`header ${mobileMenu ? "mobileView" : ""} ${show}`}>
@@ -37,36 +79,44 @@ const Header = () => {
         </div>
 
         <ul className="menuItems">
-          <li className="menuItem" onClick={() => navigate("")}>Movies</li>
-          <li className="menuItem">TV Shows</li>
+          <li className="menuItem" onClick={() => navigationHandler("movie")}>
+            Movies
+          </li>
+          <li className="menuItem" onClick={() => navigationHandler("tv")}>
+            TV Shows
+          </li>
           <li className="menuItem">
-            <FaSearch />
+            <FaSearch onClick={openSearch} />
           </li>
         </ul>
 
         <div className="mobileMenuItems">
-          <FaSearch />
-          {mobileMenu ? (<VscChromeClose onClick={() => setMobileMenu(false)} />
+          <FaSearch onClick={openSearch} />
+          {mobileMenu ? (
+            <VscChromeClose onClick={() => setMobileMenu(false)} />
           ) : (
-          <SlMenu onClick={openMobileMenu} />)}
+            <SlMenu onClick={openMobileMenu} />
+          )}
         </div>
       </ContentWrapper>
 
-      <div className="searchBar">
-        <ContentWrapper>
-          <div className="searchInput">
-            <input 
-              type="text"
-              placeholder="Search For A Movie or TV Show"
-              onChange={(e) => setQuery(e.target.value)}
-              // onKeyUp={searchQueryHandler}
-            />
-            <VscChromeClose onClick={() => setMobileMenu(false)} />
-          </div>
-        </ContentWrapper>
-      </div>
+      {showSearch && (
+        <div className="searchBar">
+          <ContentWrapper>
+            <div className="searchInput">
+              <input
+                type="text"
+                placeholder="Search For A Movie or TV Show"
+                onChange={(e) => setQuery(e.target.value)}
+                onKeyUp={searchQueryHandler}
+              />
+              <VscChromeClose onClick={() => setShowSearch(false)} />
+            </div>
+          </ContentWrapper>
+        </div>
+      )}
     </header>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;
