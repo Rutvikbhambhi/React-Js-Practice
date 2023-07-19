@@ -1,4 +1,4 @@
-  // import React from 'react'
+// import React from 'react'
 // import { useEffect, useState } from 'react';
 
 // const Home = () => {
@@ -59,44 +59,46 @@
 
 // export default Home;
 
-import React, { Component } from 'react';
+import React, { Component } from "react";
 // import Header from './Header';
-import Product from './Product';
+import Product from "./Product";
 
 export class Home extends Component {
-	constructor() {
-		super();
-		console.log('Hello i am cunstructor from news component');
-		this.state = {
-			articles: this.articles,
-			loading: false
-		};
-	}
+  constructor() {
+    super();
+    console.log("Hello i am cunstructor from news component");
+    this.state = {
+      articles: this.articles,
+      loading: false,
+    };
+  }
 
-	async componentDidMount() {
-		console.log('Rutvik');
+  async componentDidMount() {
+    console.log("Rutvik");
     let url = "https://dummyjson.com/todos";
     // https://newsapi.org/v2/top-headlines?country=in&apiKey=db57b028aeb41e285a226a94865f7a7
     // https://dummyjson.com/products
     let data = await fetch(url);
     let parsedData = await data.json();
     console.log(parsedData);
-    this.setState({articles: parsedData.articles})
-	}
+    this.setState({ articles: parsedData.articles });
+  }
 
-	render() {
+  render() {
     console.log("render");
-		return (
-      <div className='container my-3'>
+    return (
+      <div className="container my-3">
         <h2>Top Headlines</h2>
         <div className="row">
           {this.state.articles?.map((element) => {
             <div className="col-md-4" key={element.url}>
-              <Product title={element.title} id={element.id} 
-                  todo={element.Todo}
-                  todos={element.Todos}
-                  completed={element.Completed}
-                  userId={element.UserId}
+              <Product
+                title={element.title}
+                id={element.id}
+                todo={element.Todo}
+                todos={element.Todos}
+                completed={element.Completed}
+                userId={element.UserId}
               />
               {/* <Product title={element.title?element.title.slice(0, 45):""} description={element.description?element.description.slice(0, 88):""}
               // imageUrl={element.urlToImage} newsUrl={element.url} 
@@ -111,12 +113,12 @@ export class Home extends Component {
               thumbnail={element.Thumbnail}
               images={element.Images}
               /> */}
-            </div>
+            </div>;
           })}
         </div>
       </div>
-    )
-	}
+    );
+  }
 }
 
 export default Home;
