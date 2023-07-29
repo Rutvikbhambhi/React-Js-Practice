@@ -15,6 +15,10 @@ type Props = {
 
 const DataTable = (props: Props) => {
 
+  // const actionColumn: GridColDef = {
+
+  // }
+
   return (
     <div className="dataTable">
       <DataGrid
