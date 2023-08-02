@@ -12,34 +12,42 @@ import { Link } from "@mui/material";
 type Props = {
   columns: GridColDef[];
   rows: object[];
-  slug: string
+  slug: string;
 };
 
 const DataTable = (props: Props) => {
+  const queryClient = useQueryClient();
 
-  const handleDelete = (id: number)=> {
+  const mutation = useMutation({
+    mutationFn: (id: number) => {
+      return fetch(`http://localhost:8800/api/${slug}/${id}`, {
+        method: "delete",
+      });
+    },
+  });
+
+  const handleDelete = (id: number) => {
     // delete the item
     console.log(id + " has been deleted!");
-    
-  }
+  };
 
   const actionColumn: GridColDef = {
-     field: "action",
-     headerName: "Action",
-     width: 200,
-     renderCell: (params)=>{
-      return(
+    field: "action",
+    headerName: "Action",
+    width: 200,
+    renderCell: (params) => {
+      return (
         <div className="action">
           <Link to={`/${props.lug}/${params.row.id}`}>
             <img src="/view.svg" alt="" />
           </Link>
-          <div className="delete" onClick={()=>handleDelete(params.row.id)}>
+          <div className="delete" onClick={() => handleDelete(params.row.id)}>
             <img src="/delete.svg" alt="" />
           </div>
         </div>
-      )
-     }
-  }
+      );
+    },
+  };
 
   return (
     <div className="dataTable">
