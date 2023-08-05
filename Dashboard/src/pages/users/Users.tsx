@@ -5,7 +5,7 @@ import { GridColDef, GridValueFormatterParams } from "@mui/x-data-grid";
 import { userRows } from "../../data";
 import { useState } from "react";
 import Add from "../../components/add/Add";
-import {useQuery} from "@tanstack/react-query"
+import { useQuery } from "@tanstack/react-query"
 import "./users.scss";
 
 const columns: GridColDef[] = [
@@ -59,24 +59,24 @@ const columns: GridColDef[] = [
 const Users = () => {
   const [open, setOpen] = useState(false);
 
-  const { isLoading, error, data } = useQuery({
-    queryKey: ["repoData"],
+  const { isLoading, data } = useQuery({
+    queryKey: ['allusers'],
     queryFn: () =>
-      fetch("https://localhost:8800/api/users").then((res) =>
-        res.json()
+      fetch("http://localhost:8800/api/users").then(
+        (res) => res.json()
       ),
   });
 
   return (
     <div className="users">
       <div className="info">
-        <h1>User</h1>
+        <h1>Users</h1>
         <button onClick={() => setOpen(true)}>Add New Users</button>
       </div>
       {isLoading ? (
-        "Loading..."
+        "Loading..."                           
       ) : (
-        <DataTable slug="users" columns={columns} rows={userRows} />
+        <DataTable slug="users" columns={columns} rows={data} />
       )}
       {open && <Add slug="user" columns={columns} setOpen={setOpen} />}
     </div>
