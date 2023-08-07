@@ -14,12 +14,25 @@ const Add = (props: Props) => {
 
   const mutation = useMutation({
     mutationFn: (id: number) => {
-      return fetch(`http://localhost:8800/api/${props.slug}`, {
+      return fetch(`http://localhost:8800/api/${props.slug}s`, {
         method: "post",
+        headers: {
+          Accept: "application/json",
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          id: 111,
+          img: "",
+          lastName: "Hello",
+          firstName: "Test",
+          email: "testme@gmail.com",
+          phone: "5478923147",
+          varified: true,
+        })
       });
     },
     onSuccess: () => {
-      queryClient.invalidateQueries([`all${props.slug}`])
+      queryClient.invalidateQueries([`all${props.slug}s`])
     }
   });
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
@@ -27,6 +40,7 @@ const Add = (props: Props) => {
 
     // add new item 
     // axios.post(`/api/${slug}s`, {})
+    mutation.mutate()
   };
 
   return (
