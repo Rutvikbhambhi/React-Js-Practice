@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { json, useParams } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import dayjs from 'dayjs';
 
@@ -12,8 +12,11 @@ import CircleRating from '../../../components/circleRating/CircleRating';
 import img from '../../../components/lazyLoadImage/img';
 import PosterFallback from "../../../assets/no-poster.png"
 import { PlayIcon } from '../Playbtn';
+import VideoPopup from '../../../components/videoPopup/VideoPopup';
 
 const DetailsBanner = ({ video, crew }) => {
+    const [show, setShow] = useState(false)
+
     const { mediaType, id } = useParams();
     const { data, loading } = useFetch(`/${mediaType}/${id}`);
 
@@ -126,7 +129,7 @@ const DetailsBanner = ({ video, crew }) => {
                                                 </div>
                                             )}
                                         </div>
-
+                                        {/* {JSON.stringify(director)} */}
                                         {director?.length > 0 && (
                                             <div className="info">
                                                 <span className="text bold">

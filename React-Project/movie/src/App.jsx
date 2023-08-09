@@ -5,7 +5,6 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { fetchDataFromApi } from "./utils/api";
 
 import { useSelector, useDispatch } from "react-redux";
-// import { getApiConfiguration } from './store/homeSlice';
 import { getApiConfiguration, getGenres } from "./store/homeSlice";
 
 import Header from "./components/header/Header";
@@ -24,13 +23,10 @@ function App() {
   useEffect(() => {
     fetchApiConfig();
     genresCall();
-    // apiTesting();
   }, []);
 
   const fetchApiConfig = () => {
-    // const apiTesting = () => {
     fetchDataFromApi("/configuration").then((res) => {
-      // fetchDataFromApi("/movie/popular").then((res) => {
       console.log(res);
 
       const url = {
