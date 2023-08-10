@@ -1,8 +1,10 @@
 // import React from 'react'
 import { useParams } from "react-router-dom"
 import useFetch from "../../hooks/useFetch"
-import "./details.scss"
 import DetailsBanner from "./DetailsBanner/DetailsBanner"
+import Cast from "./cast/Cast";
+
+import "./details.scss";
 
 const Details = () => {
   const { mediaType, id } = useParams();
@@ -13,10 +15,11 @@ const Details = () => {
 
   return (
     <div>
-      <DetailsBanner video={data?.results?.[0]} 
+      <DetailsBanner video={data?.results?.[0]}
         crew={credits?.crew} />
+      <Cast data={credits?.cast} loading={creditsLoading} />
     </div>
-  )
-}
+  );
+};
 
-export default Details
+export default Details;
