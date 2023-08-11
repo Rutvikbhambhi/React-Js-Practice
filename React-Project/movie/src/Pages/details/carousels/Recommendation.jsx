@@ -17,4 +17,4 @@ const Recommendation = ({ mediaType, id }) => {
   )
 }
 
-export default Recommendation
+export default Recommendation;
