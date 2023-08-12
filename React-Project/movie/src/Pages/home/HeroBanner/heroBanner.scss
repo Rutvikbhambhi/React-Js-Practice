@@ -1,6 +1,4 @@
 @import "../../../mixins.scss";
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Source+Code+Pro:ital,wght@1,800&display=swap');
-
 
 .heroBanner {
     width: 100%;
@@ -9,12 +7,9 @@
     display: flex;
     align-items: center;
     position: relative;
-    font-family: 'Poppins', sans-serif;
-
     @include md {
         height: 700px;
     }
-
     .backdrop-img {
         width: 100%;
         height: 100%;
@@ -23,11 +18,9 @@
         left: 0;
         opacity: 0.5;
         overflow: hidden;
-
         .lazy-load-image-background {
             width: 100%;
             height: 100%;
-
             img {
                 width: 100%;
                 height: 100%;
@@ -36,16 +29,18 @@
             }
         }
     }
-
     .opacity-layer {
         width: 100%;
         height: 250px;
-        background: linear-gradient(180deg, rgba(4, 21, 41, 0)0%, #04152d 79.17%);
+        background: linear-gradient(
+            180deg,
+            rgba(4, 21, 45, 0) 0%,
+            #04152d 79.17%
+        );
         position: absolute;
         bottom: 0;
         left: 0;
     }
-
     .heroBannerContent {
         display: flex;
         flex-direction: column;
@@ -53,65 +48,55 @@
         color: white;
         text-align: center;
         position: relative;
+        max-width: 800px;
         margin: 0 auto;
-
         .title {
             font-size: 50px;
             font-weight: 700;
-
+            margin-bottom: 10px;
             @include md {
                 margin-bottom: 0;
                 font-size: 90px;
             }
         }
-
         .subTitle {
             font-size: 18px;
-            font-weight: 600;
+            font-weight: 500;
             margin-bottom: 40px;
-
             @include md {
                 font-size: 24px;
             }
         }
-
         .searchInput {
             display: flex;
             align-items: center;
             width: 100%;
-
             input {
                 width: calc(100% - 100px);
                 height: 50px;
-                background-color: #fff;
+                background-color: white;
                 outline: 0;
                 border: 0;
                 border-radius: 30px 0 0 30px;
                 padding: 0 15px;
                 font-size: 14px;
-                font-family: 'Poppins', sans-serif;
-                font-weight: 400;
-
                 @include md {
                     width: calc(100% - 150px);
-                    font-size: 20px;
                     height: 60px;
+                    font-size: 20px;
                     padding: 0 30px;
                 }
             }
-
             button {
                 width: 100px;
                 height: 50px;
                 background: var(--gradient);
-                color: #fff;
+                color: white;
                 outline: 0;
                 border: 0;
                 border-radius: 0 30px 30px 0;
                 font-size: 16px;
-                font-family: 'Poppins', sans-serif;
                 cursor: pointer;
-
                 @include md {
                     width: 150px;
                     height: 60px;
@@ -120,5 +105,4 @@
             }
         }
     }
-
 }

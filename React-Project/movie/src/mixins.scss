@@ -1,5 +1,5 @@
 @mixin sm {
-    @media only screen and (min-width: 768px) {
+    @media only screen and (min-width: 640px) {
         @content;
     }
 }
@@ -33,5 +33,5 @@
     -webkit-line-clamp: $line;
     -webkit-box-orient: vertical;
     overflow: hidden;
-    text-overflow: ellipsis ;
+    text-overflow: ellipsis;
 }

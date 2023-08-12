@@ -1,12 +1,10 @@
 import axios from "axios";
 
 const BASE_URL = "https://api.themoviedb.org/3";
-
-// const RUTVIK = "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJjNmU5MzM1Yjg5Y2E3MGJjY2UxYzcyYmZkMDQ4ZCIsInN1YiI6IjYzYmVkN2FiODU4Njc4MDBmMDhjZjI3NiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.sQHes_rn51wewxY_7nZLxGssnd67J8ieiLOIo2Bg_FI";
-const RUTVIK = import.meta.env.VITE_APP_RUTVIK;
+const TMDB_TOKEN = import.meta.env.VITE_APP_TMDB_TOKEN;
 
 const headers = {
-    Authorization: "bearer " + RUTVIK,
+    Authorization: "bearer " + TMDB_TOKEN,
 };
 
 export const fetchDataFromApi = async (url, params) => {
