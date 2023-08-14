@@ -153,8 +153,13 @@ const SearchResult = () => {
                                 {`Search ${data.total_results > 1
                                     ? "results"
                                     : "result"
-                                } of '${query}'`}
+                                    } of '${query}'`}
                             </div>
+                            <InfiniteScroll>
+                                {data.results.map((item, index) => {
+                                    if (item.media_type === "person") return;
+                                })}
+                            </InfiniteScroll>
                         </>
                     ) : (
                         <span className="resultNotFound">
