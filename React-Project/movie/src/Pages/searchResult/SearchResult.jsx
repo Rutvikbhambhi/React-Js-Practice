@@ -96,13 +96,17 @@
 
 
 
+import React, { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
+import InfiniteScroll from "react-infinite-scroll-component";
 
-import React from 'react';
 import "./searchResult.scss";
-import { useState } from 'react';
-import { useParams } from 'react-router-dom';
-import { useEffect } from 'react';
-import Spinner from '../../components/spinner/Spinner';
+
+import { fetchDataFromApi } from "../../utils/api";
+import ContentWrapper from "../../components/contentWrapper/ContentWrapper";
+import MovieCard from "../../components/movieCard/MovieCard";
+import Spinner from "../../components/spinner/Spinner";
+import noResults from "../../assets/no-results.png";
 
 const SearchResult = () => {
     const [data, setData] = useState(null)
@@ -146,8 +150,10 @@ const SearchResult = () => {
                     {data.results.length > 0 ? (
                         <>
                             <div className="pageTitle">
-                                {`Search ${data.total_results > 1 ? "results"
-                                : "result"} of '${query}'`}
+                                {`Search ${data.total_results > 1
+                                    ? "results"
+                                    : "result"
+                                } of '${query}'`}
                             </div>
                         </>
                     ) : (
@@ -156,7 +162,7 @@ const SearchResult = () => {
                         </span>
                     )}
                 </ContentWrapper>
-            ) }
+            )}
         </div>
     )
 }
