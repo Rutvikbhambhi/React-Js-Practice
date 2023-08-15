@@ -155,9 +155,18 @@ const SearchResult = () => {
                                     : "result"
                                     } of '${query}'`}
                             </div>
-                            <InfiniteScroll>
+                            <InfiniteScroll 
+                                className="content"
+                                dataLength={data?.results?.length || []}
+                                next={fetchInitialData}
+                                hasMore={pageNum <= data.total_pages}
+                                loader={<Spinner />}
+                            >
                                 {data.results.map((item, index) => {
                                     if (item.media_type === "person") return;
+                                    return (
+                                        <MovieCard key={index} data={item} fromSearch={true} />
+                                    )
                                 })}
                             </InfiniteScroll>
                         </>
@@ -172,4 +181,4 @@ const SearchResult = () => {
     )
 }
 
-export default SearchResult
+export default SearchResult;
