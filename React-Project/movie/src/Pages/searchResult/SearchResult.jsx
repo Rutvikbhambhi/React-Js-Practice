@@ -42,6 +42,7 @@ const SearchResult = () => {
             }
         );
     };
+    
 
     useEffect(() => {
         setPageNum(1);

@@ -22,12 +22,17 @@ const HeroBanner = () => {
         setBackground(bg);
     }, [data]);
 
-    const searchQueryHandler = (event) => {
-        if (event.key === "Enter" && query.length > 0) {
-            navigate(`/search/${query}`);
-        }
-    };
-
+    // const searchQueryHandler = (event) => {
+    //     if (event.key === "Enter" && query.length > 0) {
+    //         navigate(`/search/${query}`);
+    //     }
+    // };
+    const hadeleSearch = (event) => {
+        event.preventDefault()
+        console.log("click");
+        navigate(`/search/${query}`);
+       
+    }
     return (
         <div className="heroBanner">
             {!loading && (
@@ -45,13 +50,16 @@ const HeroBanner = () => {
                         Explore now.
                     </span>
                     <div className="searchInput">
-                        <input
-                            type="text"
-                            placeholder="Search for a movie or tv show...."
-                            onChange={(e) => setQuery(e.target.value)}
-                            onKeyUp={searchQueryHandler}
-                        />
-                        <button>Search</button>
+                        <form onSubmit={hadeleSearch}>
+
+                            <input
+                                type="text"
+                                placeholder="Search for a movie or tv show...."
+                                onChange={(e) => setQuery(e.target.value)}
+                                // onKeyUp={searchQueryHandler}
+                            />
+                            <button >Search</button>
+                        </form>
                     </div>
                 </div>
             </ContentWrapper>
