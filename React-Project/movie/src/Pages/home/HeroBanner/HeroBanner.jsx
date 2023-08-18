@@ -27,11 +27,12 @@ const HeroBanner = () => {
     //         navigate(`/search/${query}`);
     //     }
     // };
+
     const hadeleSearch = (event) => {
         event.preventDefault()
         console.log("click");
         navigate(`/search/${query}`);
-       
+
     }
     return (
         <div className="heroBanner">
@@ -51,14 +52,13 @@ const HeroBanner = () => {
                     </span>
                     <div className="searchInput">
                         <form onSubmit={hadeleSearch}>
-
                             <input
                                 type="text"
                                 placeholder="Search for a movie or tv show...."
                                 onChange={(e) => setQuery(e.target.value)}
                                 // onKeyUp={searchQueryHandler}
                             />
-                            <button >Search</button>
+                            <button>Search</button>
                         </form>
                     </div>
                 </div>
