@@ -29,7 +29,6 @@ const MapinmyLocation = () => {
     const getCurrentLocation = async (Position) => {
         await CurrentLocationdat(Position["coords"]["latitude"], Position["coords"]["longitude"])
         setfaillocatin("")
-
     }
     const faillocatin = () => {
         setfaillocatin("Current Location Error")
