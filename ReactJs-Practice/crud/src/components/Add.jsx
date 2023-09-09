@@ -25,7 +25,7 @@ const Add = () => {
     const [age, setAge] = useState('')
 
     let history = useNavigate();
-
+    
     return (
         <div>
             <Form className='d-grid gap-2' style={{ margin: "15rem" }}>
