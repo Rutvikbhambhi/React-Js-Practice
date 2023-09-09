@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const Employee = () => {
     const [empdata, setEmpDataChange] = useState(null)
@@ -6,7 +7,7 @@ const Employee = () => {
         fetch("http://localhost:8000/employee").then((res) => {
             return res.json();
         }).then((resp) => {
-            console.log(resp);
+            setEmpDataChange(resp)
         }).catch((err) => {
             console.log(err.message);
         })
@@ -18,7 +19,10 @@ const Employee = () => {
                     <h1>Employee List</h1>
                 </div>
                 <div className="card-body">
-                    <table className='table table-bordered'>
+                    <div className='divbtn'>
+                        <Link className='btn btn-success'>Add New (+)</Link>
+                    </div>
+                    <table className='text-center table table-bordered'>
                         <thead className='table-dark text-white'>
                             <tr>
                                 <td>Id</td>
@@ -38,9 +42,9 @@ const Employee = () => {
                                         <td>{item.email}</td>
                                         <td>{item.phone}</td>
                                         <td>
-                                            <a className='btn btn-success'>Edit</a>
-                                            <a className='btn btn-success'>Remove</a>
-                                            <a className='btn btn-success'>Details</a>
+                                            <button className='btn btn-success'>Edit</button>
+                                            <button className='btn btn-danger'>Remove</button>
+                                            <button className='btn btn-primary'>Details</button>
                                         </td>
                                     </tr>
                                 ))
