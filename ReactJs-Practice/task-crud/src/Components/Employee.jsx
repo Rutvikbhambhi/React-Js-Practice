@@ -7,20 +7,21 @@ const Employee = () => {
         fetch("http://localhost:8000/employee").then((res) => {
             return res.json();
         }).then((resp) => {
-            setEmpDataChange(resp)
+            setEmpDataChange(resp);
+            console.log(resp);
         }).catch((err) => {
             console.log(err.message);
         })
     }, [])
     return (
         <div className='container'>
-            <div className="card">
+            <div className="card mt-5">
                 <div className="card-title">
                     <h1>Employee List</h1>
                 </div>
                 <div className="card-body">
-                    <div className='divbtn'>
-                        <Link className='btn btn-success'>Add New (+)</Link>
+                    <div className='divbtn mb-2'>
+                        <Link to="employee/create" className='btn btn-success'>Add New (+)</Link>
                     </div>
                     <table className='text-center table table-bordered'>
                         <thead className='table-dark text-white'>

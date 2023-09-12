@@ -1,7 +1,7 @@
 import React from 'react';
-import Employee from './Components/Employee';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import "./App.css"
+import Employee from './Components/Employee';
 import EmpCreate from './EmpCreate';
 import EmpDetails from './Components/EmpDetails';
 
