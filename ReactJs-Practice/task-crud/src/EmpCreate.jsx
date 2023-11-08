@@ -13,7 +13,7 @@ const EmpCreate = () => {
 
   const handlesubmit = (e) => {
     e.preventDefault();
-    console.log( );
+    console.log("submit");
   }
 
   const showToastMessage = () => {
