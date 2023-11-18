@@ -50,11 +50,9 @@ const WeatherApp = () => {
             setWicon(rain_icon);
         } else if (data.weather[0].icon === "13d" || data.weather[0].icon === "13n") {
             setWicon(snow_icon);
-        } else{
+        } else {
             setWicon(clear_icon);
-
         }
-
     }
     return (
         <div className='container'>
